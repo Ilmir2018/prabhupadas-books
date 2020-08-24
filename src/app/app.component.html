@@ -1,21 +1,167 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="wrapper">
+  <header>
+    <nav>
+      <img class="logo_small" src="../assets/images/logotip_bd_902.png" alt="">
+      <ul>
+        <button class="nav_menu" (click)="scroll(0)">Главная</button>
+        <button class="nav_menu" (click)="scroll(1)">Комплекты</button>
+        <button class="nav_menu" (click)="scroll(3.5)">Доставка</button>
+        <button class="nav_menu" (click)="scroll(2)">Преимущества</button>
+      </ul>
+      <div class="contacts">
+        <div class="phone">
+          <img class="phone_img" src="../assets/images/phone_ringing.png" alt="">
+          <p class="phone_tel">8-993-024-04-36</p>
+        </div>
+        <button class="contacts_text">Заказать обратный звонок</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="header_content">
+      <h1 class="header_content_title">Ведическая</h1>
+      <h2 class="header_content_title2">Литература с доставкой по снг</h2>
+      <p class="header_content_title__p">«Тот, кто сможет читать эти книги с открытым сердцем,
+        не<br> останется равнодушным,независимо от конфессиональной<br>
+        прнадлежности, веры или философских убеждений».</p>
+      <div class="header_content_btn">
+        <p class="order_a_set"><a href="#books">ВЫБРАТЬ КОМПЛЕКТ КНИГ<img src="../assets/images/books.png" alt=""></a></p>
+        <img class="header_content_image" src="../assets/images/knigi.png" alt="">
+      </div>
+      <img class="background_city_vrindavan" src="../assets/images/fon_vrindavan_494.png" alt="">
+      <img class="background_city_york" src="../assets/images/fon_nyu_york_82.png" alt="">
+      <img class="srila_prabhupada" src="../assets/images/shrila_prabkhupada.png" alt="">
+    </section>
+    <section class="second_block">
+      <div class="header_content_icons">
+        <div class="icons">
+          <img class="icon_images" src="../assets/images/study_49.png" alt="">
+          <p class="icon_text">Перевод на русский язык<br>
+            с санскрита с транслитерацией</p>
+        </div>
+        <div class="icons">
+          <img class="icon_images" src="../assets/images/study_49.png" alt="">
+          <p class="icon_text">Перевод на русский язык<br>
+            с санскрита с транслитерацией</p>
+        </div>
+        <div class="icons">
+          <img class="icon_images" src="../assets/images/study_49.png" alt="">
+          <p class="icon_text">Перевод на русский язык<br>
+            с санскрита с транслитерацией</p>
+        </div>
+      </div>
+      <app-slider></app-slider>
+      <img class="prabhupada" src="../assets/images/shrila_prabkhupada_497.png" alt="">
+      <div class="slider">
+        <div class="slide active"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+    </section>
+    <section class="third_block">
+      <h1 class="third_block_title">ПРЕИМУЩЕСТВА КНИГ</h1>
+      <article class="first_book">
+        <div class="first_book_cont">
+          <p class="first_book_number">1</p>
+          <div class="first_book_text">
+            <p class="first_book_text_p1">РУССКАЯ ТРАНСЛИТЕРАЦИЯ</p>
+            <p class="first_book_text_p2">С санскрита приведена транслитерация<br> (произношение на русском)
+              на русский язык,<br> для чтения санскрита.</p>
+            <img class="first_book_img" src="../assets/images/1 табличка.png" alt="">
+          </div>
 
-<router-outlet></router-outlet>
+        </div>
+      </article>
+      <div class="two_books">
+        <article class="second_book">
+          <div class="first_book_cont">
+            <p class="second_book_number">2</p>
+            <div class="first_book_text">
+              <p class="first_book_text_p1">ЛИТЕРАТУРНЫЙ ПЕРЕВОД СТИХА</p>
+              <p class="first_book_text_p2">Литературный перевод санскриткого текста,<br>
+                для более понятного понимания текста.</p>
+              <img class="second_book_img" src="../assets/images/2 табличка.png" alt="">
+            </div>
+
+          </div>
+        </article>
+        <article class="third_book">
+          <div class="first_book_cont">
+            <p class="third_book_number">3</p>
+            <div class="first_book_text">
+              <p class="first_book_text_p1">ИЗНАЧАЛЬНЫЙ САНСКРИТ</p>
+              <p class="first_book_text_p2">В книгах приведены оригинальные санскрит-<br>ские тексты.</p>
+              <img class="third_book_img" src="../assets/images/3 табличка.png" alt="">
+            </div>
+          </div>
+        </article>
+      </div>
+      <article class="fourth_book">
+        <div class="first_book_cont">
+          <p class="fourth_book_number">4</p>
+          <div class="first_book_text">
+            <p class="first_book_text_p1">КОММЕНТАРИЙ К СТИХУ</p>
+            <p class="first_book_text_p2">Авторитетный комментарий ачарии,
+              принад-<br>лежащего к цепи духовных учителей.<br> Это позволяет передавать знание без искажений.</p>
+            <img class="fourth_book_img" src="../assets/images/4 табличка.png" alt="">
+          </div>
+        </div>
+      </article>
+      <img class="top_book" src="../assets/images/Книга 1 верх.png" alt="">
+      <img class="top_light" src="../assets/images/pravyy_blik_835.png" alt="">
+      <img class="bottom_book" src="../assets/images/Книга 2 низ.png" alt="">
+      <img class="bottom_light" src="../assets/images/levyy_blik_836.png" alt="">
+    </section>
+    <section class="fourth_block">
+      <h1 class="fourth_block_title">ДОСТАВИМ КНИГИ В ЛЮБУЮ ТОЧКУ СНГ</h1>
+      <div class="fourth_block_content">
+        <img class="fourth_block_image" src="../assets/images/muzhik_898.png" alt="">
+      </div>
+      <div class="fourth_block_icons">
+        <img src="../assets/images/pochta_904.png" alt="">
+        <img src="../assets/images/pek_906.png" alt="">
+        <img src="../assets/images/boksb_905.png" alt="">
+        <img src="../assets/images/cdek_907.png" alt="">
+      </div>
+    </section>
+    <section class="five_block">
+      <h1 class="five_block_title">получите консультацию по комплектам, книг,<br> 
+        либо соберите свой вариант комплекта</h1>
+      <div class="five_block_info">
+        <img class="five_block_img" src="../assets/images/sloy_24_979.png" alt="">
+        <div class="five_block_name">
+          <p class="autor_name">Михаил Выговский</p>
+          <p class="position">менеджер по клиентам</p>
+        </div>
+      </div>
+      <form action="" [formGroup]="signUpForm">
+        <div class="input_form">
+          <label for="phone">Введите Ваш номер телефона</label>
+          <input type="text" id="phone" placeholder="+7-(___)-___-__-__" formControlName="phones" appPhoneMask>
+        </div>
+        <div class="form_btn">
+          <p class="order_a_set"><a href="#books">получить консультацию</a></p>
+          <div class="form_checkbox">
+            <input type="checkbox">
+            <button class="btn_checkbox">Я соглашаюсь на обработку данных</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <img class="footer_img" src="../assets/images/logotip_bd_1019.png" alt="">
+    <a class="vk" href=""></a>
+    <button class="footer_btn">Политика конфиденциальности</button>
+    <div class="contacts">
+      <div class="phone">
+        <img class="phone_img" src="../assets/images/phone_ringing.png" alt="">
+        <p class="phone_tel">8-993-024-04-36</p>
+      </div>
+      <button class="contacts_text">Заказать обратный звонок</button>
+    </div>
+  </footer>
+</div>

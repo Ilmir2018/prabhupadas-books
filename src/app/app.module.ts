@@ -3,16 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { PhoneMaskDirective } from './phone-mask.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SliderComponent,
+    ContactsComponent,
+    PhoneMaskDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  exports: [PhoneMaskDirective],
+  providers: [FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
