@@ -1,17 +1,16 @@
 <div class="slider">
-  <button class="left_arrow"></button>
-  <div class="slider_content">
-      <img class="slider_image" src="../assets/images/krtinka_knig_489.png" alt="">
-      <article class="books_content">
-          <h1 class="books_content__title">Комплект<br> ШРИМАД БХАГАВАТАМ</h1>
-          <p class="books_content__text">Истории о из древних пуран о настоящем счастье,<br>
-              происходившие миллионы лет назад.</p>
+  <button (click)='changeImages(0)' class="left_arrow"></button>
+  <div *ngFor = "let slide of slides; let i = index;" class="slider_content">
+      <img *ngIf="i === count" class="slider_image" [src]=slides[count].image alt="">
+      <article class="books_content" *ngIf="i === count">
+          <h1 class="books_content__title1">Комплект</h1><br><h1 class="books_content__title2">{{slides[count].title}}</h1>
+          <p class="books_content__text">{{slides[count].text}}</p>
           <hr>
           <div class="count_books">
               <img class="book" src="../assets/images/books_kopiya_410.png" alt="">
-              <p class="count_books__title">26 томов</p>
-              <img class="book" src="../assets/images/books_kopiya_410.png" alt="">
-              <p class="count_books__title">12 песен</p>
+              <p class="count_books__title">{{slides[count].countBooks}}</p>
+              <img *ngIf="count!==5" class="book" src="../assets/images/books_kopiya_410.png" alt="">
+              <p class="count_books__title">{{slides[count].countSongs}}</p>
           </div>
           <hr>
           <div class="choosing_kit">
@@ -21,8 +20,8 @@
                               src="../assets/images/books.png" alt=""></a></p>
                   <div class="choosing_text">
                       <div class="cost">
-                          <p class="cost__p">9 990</p>
-                          <p>руб.</p>
+                          <p class="cost__p">{{slides[count].price}}</p>
+                          <p class="text__p">руб.</p>
                       </div>
                       <p class="cost_text">Доставка Бесплатно</p>
                   </div>
@@ -30,5 +29,5 @@
           </div>
       </article>
   </div>
-  <button class="right_arrow"></button>
+  <button (click)='changeImages(1)' class="right_arrow"></button>
 </div>
