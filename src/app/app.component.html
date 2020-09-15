@@ -25,7 +25,8 @@
         не<br> останется равнодушным,независимо от конфессиональной<br>
         прнадлежности, веры или философских убеждений».</p>
       <div class="header_content_btn">
-        <p class="order_a_set"><a href="#books">ВЫБРАТЬ КОМПЛЕКТ КНИГ<img src="../assets/images/books.png" alt=""></a></p>
+        <p class="order_a_set"><a (click)="scroll(1)">ВЫБРАТЬ КОМПЛЕКТ КНИГ<img src="../assets/images/books.png"
+              alt=""></a></p>
         <img class="header_content_image" src="../assets/images/knigi.png" alt="">
       </div>
       <img class="background_city_vrindavan" src="../assets/images/fon_vrindavan_494.png" alt="">
@@ -50,15 +51,15 @@
             с санскрита с транслитерацией</p>
         </div>
       </div>
-      <app-slider></app-slider>
+      <app-slider (dataChanged)="dataChangeHandler($event)"></app-slider>
       <img class="prabhupada" src="../assets/images/shrila_prabkhupada_497.png" alt="">
       <div class="slider">
-        <div class="slide active"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
+        <div class="slide active" (onclick)="currentSlide(1)"></div>
+        <div class="slide" (onclick)="currentSlide(2)"></div>
+        <div class="slide" (onclick)="currentSlide(3)"></div>
+        <div class="slide" (onclick)="currentSlide(4)"></div>
+        <div class="slide" (onclick)="currentSlide(5)"></div>
+        <div class="slide" (onclick)="currentSlide(6)"></div>
       </div>
     </section>
     <section class="third_block">
@@ -85,7 +86,6 @@
                 для более понятного понимания текста.</p>
               <img class="second_book_img" src="../assets/images/2 табличка.png" alt="">
             </div>
-
           </div>
         </article>
         <article class="third_book">
@@ -128,7 +128,7 @@
       </div>
     </section>
     <section class="five_block">
-      <h1 class="five_block_title">получите консультацию по комплектам, книг,<br> 
+      <h1 class="five_block_title">получите консультацию по комплектам, книг,<br>
         либо соберите свой вариант комплекта</h1>
       <div class="five_block_info">
         <img class="five_block_img" src="../assets/images/sloy_24_979.png" alt="">
@@ -137,17 +137,26 @@
           <p class="position">менеджер по клиентам</p>
         </div>
       </div>
-      <form action="" [formGroup]="signUpForm">
+      <form action="/" method="post" [formGroup]="signUpForm" novalidate>
         <div class="input_form">
           <label for="phone">Введите Ваш номер телефона</label>
-          <input type="text" id="phone" placeholder="+7-(___)-___-__-__" formControlName="phones" appPhoneMask>
+          <input type="text" name="phone" id="phone" placeholder="+7-(___)-___-__-__" formControlName="phones"
+          appPhoneMask>
+          <div class="input_form__valid" *ngIf="_phones.invalid || _phones.touched">
+            <span *ngIf="_phones.errors?.required">Обязательное поле</span>
+            <span *ngIf="_phones.errors?.min">Недопустимое количество символов</span>
+          </div>
         </div>
         <div class="form_btn">
-          <p class="order_a_set"><a href="#books">получить консультацию</a></p>
           <div class="form_checkbox">
-            <input type="checkbox">
+            <input type="checkbox" formControlName="checkbox" required>
             <button class="btn_checkbox">Я соглашаюсь на обработку данных</button>
           </div>
+          <div class="form_checkbox__valid" *ngIf="_checkbox.invalid">
+            <span *ngIf="_checkbox.errors?.required">Необходимо поставить галочку</span>
+          </div>
+          <input class="order_a_set" (click)="submit()" type="submit" name="submit" href="#books"
+            value="получить консультацию" [disabled]="signUpForm.invalid">
         </div>
       </form>
     </section>

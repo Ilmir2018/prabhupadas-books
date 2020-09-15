@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, interval } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { SliderComponent } from './components/slider/slider.component';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,12 @@ export class AppComponent implements OnInit {
 
   signUpForm: FormGroup;
   visible: boolean;
+  clicks: number = 0;
+  slideIndex: number = 1;
 
-  constructor(private fb: FormBuilder) {
+  @ViewChild(SliderComponent) viewChild: SliderComponent
+
+  constructor(private fb: FormBuilder, private http: HttpClient) {
 
   }
 
@@ -22,6 +26,54 @@ export class AppComponent implements OnInit {
     this.visible = false;
   }
 
+  ngAfterViewInit() {
+    console.log(this.viewChild)
+  }
+
+  get _phones() {
+    return this.signUpForm.get('phones')
+  }
+
+  get _checkbox() {
+    return this.signUpForm.get('checkbox')
+  }
+
+
+  /**
+   * Функция для смены класса для кружочков, событие передаётся из дочернего класса app-slider
+   * @param data true или false в зависимости от влево-вправо  
+   */
+  dataChangeHandler(data) {
+    if (data === true) {
+      this.showSlides(this.slideIndex += 1);
+    } else {
+      this.showSlides(this.slideIndex -= 1);
+    }
+  }
+
+  //Текущий слайд
+  currentSlide(n) {
+    this.showSlides(this.slideIndex = n);
+  }
+
+
+  //Функция смены класса
+  showSlides(n) {
+    let i;
+    let dots = document.getElementsByClassName("slide");
+    if (n > dots.length) {
+      this.slideIndex = 1
+    }
+    if (n < 1) {
+      this.slideIndex = dots.length
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    dots[this.slideIndex - 1].className += " active";
+  }
+
+  //Функция скроллинга по странице
   scroll(multiplier) {
     window.scrollTo(
       {
@@ -37,9 +89,14 @@ export class AppComponent implements OnInit {
         [
           Validators.required,
           Validators.pattern(/[0-9]/),
-          Validators.maxLength(11)
+          Validators.maxLength(21),
+          Validators.minLength(16)
         ]
       ],
+      checkbox: ['',
+        [
+          Validators.required,
+        ]]
     });
   }
 
@@ -47,37 +104,33 @@ export class AppComponent implements OnInit {
     return window.getSelection().toString();
   }
 
-  checkKey(event: KeyboardEvent, maxLength = 999) {
-    const pattern = /[0-9]/;
-    if (
-      this.getSelectedText().length &&
-      (event.target as HTMLInputElement).value.includes(this.getSelectedText()) &&
-      pattern.test(event.key)
-    ) {
-      return;
-    }
-    if ((!pattern.test(event.key) ||
-      (event.target as HTMLInputElement).value.length > maxLength) &&
-      !this.specialKey(event.keyCode)) {
-      event.preventDefault();
-    }
-  }
-
-  specialKey(key: number) {
-    return (
-      key === 8 || // check key backspace
-      key === 9 || // check key TAB
-      key === 46 || // check key delete
-      key === 38 || // check key left
-      key === 37 || // check key right
-      key === 39 || // check key up
-      key === 40 // check key down
-    );
-  }
-
   visibility() {
     this.visible = true;
   }
+
+  submit() {
+    const myHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return new Promise((res, rej) => {
+      this.http.post
+        ('http://localhost:3000/', { phone: this.signUpForm.get('phones').value, complect: 'Консультация' }, { headers: myHeaders })
+        .subscribe(
+          (val) => {
+            console.log("POST call successful value returned in body",
+              val);
+          },
+          response => {
+            console.log("POST call in error", response);
+          },
+          () => {
+            console.log("The POST observable is now completed.");
+
+          });
+      // location.reload(true);
+    });
+
+  }
+
+  
 
 
 }

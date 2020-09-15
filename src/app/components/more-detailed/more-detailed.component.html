@@ -1,0 +1,198 @@
+<div *ngIf="complect != 6 && visibility"  class="complect">
+  <div *ngIf="complect != 6" class="left_block">
+    <img class="left_block__image" [src]=slides[complect].image alt="">
+    <div class="texts">
+      <p class="content">Кол-во томов: <span class="count">{{slides[complect].count_books}}</span></p>
+      <p *ngIf="complect == 0" class="content">Кол-во песен: <span class="count">{{slides[complect].count_songs}}</span>
+      </p>
+      <p *ngIf="complect == 1" class="content">Кол-во лил: <span class="count">{{slides[complect].count_songs}}</span>
+      </p>
+      <p *ngIf="complect == 2 || complect == 3 || complect == 4 || complect == 5" class="content">Кол-во произведений:
+        <span class="count">{{slides[complect].count_songs}}</span></p>
+      <p *ngIf="complect == 0 || complect == 1" class="content">Кол-во стихов: <span
+          class="count">{{slides[complect].count_verses}}</span></p>
+      <p *ngIf="complect == 1 && complect != 2" class="content">Кол-во глав: <span
+          class="count">{{slides[complect].count_pages}}</span></p>
+      <p *ngIf="complect == 0 && complect != 2 && complect != 3" class="content">Кол-во страниц: <span
+          class="count">{{slides[complect].count_pages}}</span></p>
+      <p class="content">Вес: <span class="count">{{slides[complect].weight}}</span></p>
+      <p *ngIf="complect == 0" class="content">Габариты: <span class="count">{{slides[complect].size}}</span></p>
+      <br>
+      <p class="content">Цена: <span class="count">{{slides[complect].price}}</span></p>
+    </div>
+    <form action="" [formGroup]="orderComplect">
+      <div class="input_form">
+        <label for="phone">Введите Ваш номер телефона</label>
+        <input type="text" id="phone" placeholder="+7-(___)-___-__-__" formControlName="phones" appPhoneMask>
+      </div>
+      <div class="form_btn">
+        <p class="order_a_set"><a href="#books">получить консультацию</a></p>
+        <div class="form_checkbox">
+          <input type="checkbox">
+          <button class="btn_checkbox">Я соглашаюсь на обработку данных</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="right_block">
+    <p class="white_title">Комплект</p>
+    <p class="title">{{slides[complect].title_2}}</p>
+    <p *ngIf="complect != 2 && complect != 3 && complect != 4" class="right_block__text">{{slides[complect].outline}}
+    </p>
+    <p *ngIf="complect == 2" class="right_block__text2">{{slides[complect].outline}}</p>
+    <p *ngIf="complect == 3 || complect == 4" class="right_block__text3">{{slides[complect].outline}}</p>
+    <p *ngIf="complect != 2 && complect != 3" class="bhagavata">{{slides[complect].subtitle_1}}</p>
+    <p *ngIf="complect != 2 && complect != 3" class="purana">{{slides[complect].subtitle_2}}</p>
+    <div class="complect_2" *ngIf="complect == 2">
+      <p class="bhagavata">{{slides[complect].subtitle_1}}</p>
+      <p class="purana">{{slides[complect].subtitle_2}}</p>
+    </div>
+    <div *ngIf="complect == 0 || complect == 1 || complect == 2" class="right_block__content">
+      <div class="left_content">
+        <p class="left_content_text">
+          {{slides[complect].text_1_paragraph_1}}
+        </p>
+        <p class="left_content_text">
+          {{slides[complect].text_1_paragraph_2}}
+        </p>
+        <p class="left_content_text">
+          {{slides[complect].text_1_paragraph_3}}
+        </p>
+      </div>
+      <div class="right_content">
+        <p class="right_content_text">
+          {{slides[complect].text_2_paragraph_1}}
+        </p>
+        <p class="right_content_text">
+          {{slides[complect].text_2_paragraph_2}}
+        </p>
+        <p class="right_content_text">
+          {{slides[complect].text_2_paragraph_3}}
+        </p>
+      </div>
+    </div>
+    <div *ngIf="complect == 3 || complect ==4" class="right_block__content_3">
+      <div class="left_content">
+        <div class="left_content__top">
+          <div class="left_top_title">
+            <p class="left_content_title_1">{{slides[complect].text_1_paragraph_1_title}}</p>
+            <p class="left_content_title_2">{{slides[complect].text_1_paragraph_2_title}}</p>
+          </div>
+          <p class="left_content_text">
+            {{slides[complect].text_1_paragraph_1}}
+          </p>
+          <p class="left_content_text">
+            {{slides[complect].text_1_paragraph_2}}
+          </p>
+        </div>
+        <div class="left_content__bottom">
+          <div class="left_bottom_title">
+            <p class="left_content_title_1">{{slides[complect].text_1_paragraph_3_title}}</p>
+            <p class="left_content_title_2">{{slides[complect].text_1_paragraph_4_title}}</p>
+          </div>
+          <p class="left_content_text">
+            {{slides[complect].text_1_paragraph_3}}
+          </p>
+          <p class="left_content_text">
+            {{slides[complect].text_1_paragraph_4}}
+          </p>
+        </div>
+      </div>
+      <div class="right_content">
+        <div class="right_content__top">
+          <div class="right_top_title">
+            <p class="right_content_title_1">{{slides[complect].text_1_paragraph_5_title}}</p>
+            <p class="right_content_title_2">{{slides[complect].text_1_paragraph_6_title}}</p>
+          </div>
+          <p class="right_content_text">
+            {{slides[complect].text_2_paragraph_5}}
+          </p>
+          <p class="right_content_text">
+            {{slides[complect].text_2_paragraph_6}}
+          </p>
+        </div>
+        <div class="right_content__bottom">
+          <div class="right_bottom_title">
+            <p class="right_content_title_1">{{slides[complect].text_1_paragraph_7_title}}</p>
+            <p class="right_content_title_2">{{slides[complect].text_1_paragraph_8_title}}</p>
+          </div>
+          <p class="right_content_text">
+            {{slides[complect].text_2_paragraph_7}}
+          </p>
+          <p class="right_content_text">
+            {{slides[complect].text_2_paragraph_8}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="complect == 5" class="right_block__content_4">
+      <div class="right_block_title">
+        <p class="right_block_title1">Комплект состоит</p>
+        <p class="right_block_title2">из 7 книг</p>
+      </div>
+      <ol>
+        <li>Путь к совершенству</li>
+        <li>Бесценный дар</li>
+        <li>Царь знания</li>
+        <li>Лёгкое путешествие на другие планеты</li>
+        <li>В поисках просветления</li>
+        <li>Грихастха ашрам</li>
+        <li>Нектар наставлений.</li>
+      </ol>
+    </div>
+    <p *ngIf="complect == 0 || complect == 1 || complect == 2" class="contains">{{slides[complect].content}}</p>
+    <div *ngIf="complect == 0 || complect == 1 || complect == 2" class="contains_text">
+      <p class="description">
+        {{slides[complect].subcontent_1}}
+      </p>
+      <p class="description">
+        {{slides[complect].subcontent_2}}
+      </p>
+      <p class="description">
+        {{slides[complect].subcontent_3}}
+      </p>
+    </div>
+    <button (click)="close(true)" class="close"></button>
+  </div>
+  <div class="hidden_block"></div>
+
+</div>
+
+<div class="complect2" *ngIf="visibility && complect == 6">
+  <div *ngIf="complect == 6" class="top">
+    <img class="top_block__image" [src]=slides[complect].image alt="">
+  </div>
+  <div *ngIf="complect == 6" class="bottom">
+    <div class="left">
+      <div class="texts">
+        <p class="content">Кол-во томов: <span class="count">97</span></p>
+        <p class="content">Кол-во произведений: <span class="count">36</span></p>
+        <p class="content">Вес: <span class="count">36 000 гр</span></p>
+        <br>
+        <div class="green_btn">новая цена</div>
+        <p class="content">Цена: <span class="count_after">24 000 р</span> <span class="count2">19 000 р</span></p>
+      </div>
+      <form action="" [formGroup]="orderComplect">
+        <div class="input_form">
+          <label for="phone">Введите Ваш номер телефона</label>
+          <input type="text" id="phone" placeholder="+7-(___)-___-__-__" formControlName="phones" appPhoneMask>
+        </div>
+        <div class="form_btn">
+          <p class="order_a_set2"><a href="#books">получить консультацию</a></p>
+          <div class="form_checkbox">
+            <input type="checkbox">
+            <button class="btn_checkbox">Я соглашаюсь на обработку данных</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="right">
+      <p class="first_text">комплект</p>
+      <p class="second_text">все книги ш.прабхупады</p>
+      <p class="third_text">97 томов</p>
+      <p class="fourth_text">трансцендентного знания</p>
+    </div>
+  </div>
+  <div class="hidden_block"></div>
+  <button (click)="close(true)" class="close"></button>
+</div>

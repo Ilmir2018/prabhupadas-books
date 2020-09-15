@@ -1,0 +1,91 @@
+<div *ngIf="visibility && complect != 6" class="complect">
+  <div class="cont">
+    <div class="top_block">
+      <img [src]=slides[complect].image alt="" class="top_block__img">
+      <div class="top_block__content">
+        <p class="white_title">Комплект</p>
+        <p class="title">{{slides[complect].title_1}}</p>
+        <p class="content">Кол-во томов: <span class="count">{{slides[complect].count_books}}</span></p>
+        <p *ngIf="complect == 0" class="content">Кол-во песен: <span
+            class="count">{{slides[complect].count_songs}}</span>
+        </p>
+        <p *ngIf="complect == 1" class="content">Кол-во лил: <span class="count">{{slides[complect].count_songs}}</span>
+        </p>
+        <p *ngIf="complect == 2 || complect == 3 || complect == 4 || complect == 5" class="content">Кол-во произведений:
+          <span class="count">{{slides[complect].count_songs}}</span></p>
+        <p *ngIf="complect == 0 || complect == 1" class="content">Кол-во стихов: <span
+            class="count">{{slides[complect].count_verses}}</span></p>
+        <p *ngIf="complect == 1 && complect != 2" class="content">Кол-во глав: <span
+            class="count">{{slides[complect].count_pages}}</span></p>
+        <p *ngIf="complect == 0 && complect != 2 && complect != 3" class="content">Кол-во страниц: <span
+            class="count">{{slides[complect].count_pages}}</span></p>
+        <p class="content">Вес: <span class="count">{{slides[complect].weight}}</span></p>
+        <p *ngIf="complect == 0" class="content">Габариты: <span class="count">{{slides[complect].size}}</span></p>
+        <br>
+        <p class="content">Цена: <span class="count">{{slides[complect].price}}</span></p>
+      </div>
+    </div>
+    <div class="middle_block">
+      <div class="middle_block_left">
+        <img src="../../../assets/complects/money_1487.png" alt="">
+        <p class="middle_block_left_txt">Оплата при<br>
+          получении книг</p>
+      </div>
+      <div class="middle_block_right">
+        <img src="../../../assets/complects/box_1495.png" alt="">
+        <p class="middle_block_right_txt">Доставка от 3<br>
+          до 10 дней</p>
+      </div>
+    </div>
+    <div class="bottom_block">
+      <form action="" [formGroup]="orderComplect">
+        <div class="input_form">
+          <label for="phone">Введите Ваш номер телефона</label>
+          <input type="text" id="phone" placeholder="+7-(___)-___-__-__" formControlName="phones" appPhoneMask>
+        </div>
+        <div class="form_btn">
+          <p class="order_a_set"><a href="#books">заказать комплект</a></p>
+          <div class="form_checkbox">
+            <input type="checkbox">
+            <button class="btn_checkbox">Я соглашаюсь на обработку данных</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <button (click)="close(true)" class="close"></button>
+  <div class="hidden_block"></div>
+</div>
+
+<div *ngIf="visibility && complect == 6" class="complect_2">
+  <div class="cont">
+    <p class="cont_title">комплект<br>
+      все книги ш.прабхупады</p>
+    <img src="../../../assets/complects/vse_3476.png" alt="">
+    <div class="form">
+      <form action="" [formGroup]="orderComplect">
+        <div class="input_form">
+          <label for="phone">Введите Ваш номер телефона</label>
+          <input type="text" id="phone" placeholder="+7-(___)-___-__-__" formControlName="phones" appPhoneMask>
+        </div>
+        <div class="form_btn">
+          <p class="order_a_set"><a href="#books">заказать комплект</a></p>
+          <div class="form_checkbox">
+            <input type="checkbox">
+            <button class="btn_checkbox">Я соглашаюсь на обработку данных</button>
+          </div>
+        </div>
+      </form>
+      <div class="form_contet">
+        <p class="content">Кол-во томов: <span class="count">97</span></p>
+        <p class="content">Кол-во произведений: <span class="count">36</span></p>
+        <p class="content">Вес: <span class="count">36 000 гр</span></p>
+        <br>
+        <p class="new_price">новая цена</p>
+        <p class="content">Цена: <span class="count">24 000 р</span><span class="count_2">19 990 р</span></p>
+      </div>
+    </div>
+  </div>
+  <button (click)="close(true)" class="close"></button>
+  <div class="hidden_block"></div>
+</div>
