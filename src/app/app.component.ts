@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SliderComponent } from './components/slider/slider.component';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { SendMailService } from './services/send-mail.service';
+import { resolve } from 'url';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +16,12 @@ export class AppComponent implements OnInit {
   visible: boolean;
   clicks: number = 0;
   slideIndex: number = 1;
+  error: any;
+  private done: boolean = false;
 
   @ViewChild(SliderComponent) viewChild: SliderComponent
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private httpService: SendMailService) {
 
   }
 
@@ -89,7 +93,7 @@ export class AppComponent implements OnInit {
         [
           Validators.required,
           Validators.pattern(/[0-9]/),
-          Validators.maxLength(21),
+          Validators.maxLength(20),
           Validators.minLength(16)
         ]
       ],
@@ -109,28 +113,31 @@ export class AppComponent implements OnInit {
   }
 
   submit() {
-    const myHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return new Promise((res, rej) => {
-      this.http.post
-        ('http://localhost:3000/', { phone: this.signUpForm.get('phones').value, complect: 'Консультация' }, { headers: myHeaders })
-        .subscribe(
-          (val) => {
-            console.log("POST call successful value returned in body",
-              val);
-          },
-          response => {
-            console.log("POST call in error", response);
-          },
-          () => {
-            console.log("The POST observable is now completed.");
+    this.httpService.getConsultation('http://localhost:3000/',
+      this.signUpForm.get('phones').value, 'Комплект');
+      this.done = true;
+      console.log(this.done)
+    // let done = this.done;
+    // let promise = new Promise<any>(function (resolve, reject) {
+    //   resolve(location.reload(true));
+    // });
 
-          });
-      // location.reload(true);
-    });
+    // promise.then(
+    //   result => setTimeout(() => {
+    //     console.log('asfsdafsaf')
+    //   }, 3000), // не будет запущена
+    //   error => console.log('sdgsdgsdgd')// выведет "Error: Whoops!" спустя одну секунду
+    // );
 
+    // if(this.done === true) {
+    //   location.reload(true)
+    // }
   }
 
-  
-
+  dataClose(data) {
+    if (data === true) {
+      this.done = false;
+    }
+  }
 
 }

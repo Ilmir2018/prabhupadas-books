@@ -10,6 +10,7 @@ import { PhoneMaskDirective } from './phone-mask.directive';
 import { MoreDetailedComponent } from './components/more-detailed/more-detailed.component';
 import { OrderComplectComponent } from './components/order-complect/order-complect.component';
 import { HttpClientModule }   from '@angular/common/http';
+import { GratitudeComponent } from './components/gratitude/gratitude.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule }   from '@angular/common/http';
     ContactsComponent,
     PhoneMaskDirective,
     MoreDetailedComponent,
-    OrderComplectComponent
+    OrderComplectComponent,
+    GratitudeComponent
   ],
   imports: [
     BrowserModule,
