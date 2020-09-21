@@ -1,9 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SliderComponent } from './components/slider/slider.component';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { SendMailService } from './services/send-mail.service';
-import { resolve } from 'url';
 
 @Component({
   selector: 'app-root',
@@ -16,12 +14,12 @@ export class AppComponent implements OnInit {
   visible: boolean;
   clicks: number = 0;
   slideIndex: number = 1;
+  consultation: boolean = false;
   error: any;
-  private done: boolean = false;
 
   @ViewChild(SliderComponent) viewChild: SliderComponent
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private httpService: SendMailService) {
+  constructor(private fb: FormBuilder, private httpService: SendMailService) {
 
   }
 
@@ -36,6 +34,10 @@ export class AppComponent implements OnInit {
 
   get _phones() {
     return this.signUpForm.get('phones')
+  }
+
+  get _name() {
+    return this.signUpForm.get('name')
   }
 
   get _checkbox() {
@@ -97,6 +99,13 @@ export class AppComponent implements OnInit {
           Validators.minLength(16)
         ]
       ],
+      name: ['',
+        [
+          Validators.required,
+          Validators.maxLength(16),
+          Validators.minLength(5)
+        ]
+      ],
       checkbox: ['',
         [
           Validators.required,
@@ -114,29 +123,23 @@ export class AppComponent implements OnInit {
 
   submit() {
     this.httpService.getConsultation('http://localhost:3000/',
-      this.signUpForm.get('phones').value, 'Комплект');
-      this.done = true;
-      console.log(this.done)
-    // let done = this.done;
-    // let promise = new Promise<any>(function (resolve, reject) {
-    //   resolve(location.reload(true));
-    // });
-
-    // promise.then(
-    //   result => setTimeout(() => {
-    //     console.log('asfsdafsaf')
-    //   }, 3000), // не будет запущена
-    //   error => console.log('sdgsdgsdgd')// выведет "Error: Whoops!" спустя одну секунду
-    // );
-
-    // if(this.done === true) {
-    //   location.reload(true)
-    // }
+      this.signUpForm.get('phones').value, this.signUpForm.get('name').value, 'Комплект');
+      this.httpService.done = true;
   }
 
   dataClose(data) {
     if (data === true) {
-      this.done = false;
+      this.httpService.done = false;
+    }
+  }
+
+  consult() {
+    this.consultation = true;
+  }
+
+  consulting(data) {
+    if (data === true) {
+      this.consultation = false;
     }
   }
 

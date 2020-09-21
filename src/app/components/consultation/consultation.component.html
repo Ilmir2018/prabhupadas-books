@@ -1,0 +1,34 @@
+<div *ngIf="visibility" class="consultation">
+  <div class="cont">
+    <p class="cont_text">получите консультацию<br>по комплектам книг</p>
+    <div class="five_block_info">
+      <img class="five_block_img" src="../../../assets/complects/autor.png" alt="">
+      <div class="five_block_name">
+        <p class="autor_name">Михаил Выговский</p>
+        <p class="position">менеджер по клиентам</p>
+      </div>
+    </div>
+    <form action="/" method="post" [formGroup]="getConsulting">
+      <div class="input_form form_1">
+        <label for="name">Введите ваше имя</label>
+        <input type="text" name="name" id="name" class="form_input" placeholder="________________"
+          formControlName="name" appNameMask>
+      </div>
+      <div class="input_form form_2">
+        <label for="phone">Введите Ваш номер телефона</label>
+        <input type="text" name="phone" id="phone" class="form_input" placeholder="+7-(___)-___-__-__"
+          formControlName="phones" appPhoneMask>
+      </div>
+      <div class="form_btn">
+        <input class="order_a_set" (click)="submit()" type="submit" name="submit" href="#books"
+          value="получить консультацию" [disabled]="getConsulting.invalid">
+        <div class="form_checkbox">
+          <input type="checkbox" formControlName="checkbox" required>
+          <button class="btn_checkbox">Я соглашаюсь на обработку данных</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <button (click)="close(true)" class="close"></button>
+  <div class="hidden_block"></div>
+</div>

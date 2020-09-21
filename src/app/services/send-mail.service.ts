@@ -7,11 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class SendMailService {
 
+  public done: boolean = false;
+
   constructor(private http: HttpClient) { }
 
-  getConsultation(adress, phone, complect) {
+  getConsultation(adress, phone, name, complect) {
     const myHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(adress, { phone: phone, complect: complect }, { headers: myHeaders }).subscribe();
-      // location.reload(true);
+    return this.http.post(adress, { phone: phone, name: name, complect: complect }, { headers: myHeaders }).subscribe();
   }
 }

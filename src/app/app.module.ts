@@ -11,6 +11,8 @@ import { MoreDetailedComponent } from './components/more-detailed/more-detailed.
 import { OrderComplectComponent } from './components/order-complect/order-complect.component';
 import { HttpClientModule }   from '@angular/common/http';
 import { GratitudeComponent } from './components/gratitude/gratitude.component';
+import { NameMaskDirective } from './name-mask.directive';
+import { ConsultationComponent } from './components/consultation/consultation.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,11 @@ import { GratitudeComponent } from './components/gratitude/gratitude.component';
     SliderComponent,
     ContactsComponent,
     PhoneMaskDirective,
+    NameMaskDirective,
     MoreDetailedComponent,
     OrderComplectComponent,
-    GratitudeComponent
+    GratitudeComponent,
+    ConsultationComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import { GratitudeComponent } from './components/gratitude/gratitude.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  exports: [PhoneMaskDirective],
+  exports: [PhoneMaskDirective, NameMaskDirective],
   providers: [FormBuilder],
   bootstrap: [AppComponent]
 })

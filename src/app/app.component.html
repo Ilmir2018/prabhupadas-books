@@ -13,7 +13,7 @@
           <img class="phone_img" src="../assets/images/phone_ringing.png" alt="">
           <p class="phone_tel">8-993-024-04-36</p>
         </div>
-        <button class="contacts_text">Заказать обратный звонок</button>
+        <button class="contacts_text" (click)="consult()">Заказать обратный звонок</button>
       </div>
     </nav>
   </header>
@@ -51,6 +51,7 @@
             с санскрита с транслитерацией</p>
         </div>
       </div>
+      <h1 class="choose_complect">выбери свой комплект</h1>
       <app-slider (dataChanged)="dataChangeHandler($event)"></app-slider>
       <img class="prabhupada" src="../assets/images/shrila_prabkhupada_497.png" alt="">
       <div class="slider">
@@ -138,10 +139,19 @@
         </div>
       </div>
       <form action="/" method="post" [formGroup]="signUpForm" novalidate>
-        <div class="input_form">
+        <div class="input_form form_1">
+          <label for="name">Введите ваше имя</label>
+          <input type="text" name="name" id="name" class="form_input" placeholder="________________" 
+          formControlName="name" appNameMask>
+          <div class="input_form__valid" *ngIf="_name.invalid || _name.touched" maxLength="10">
+            <span *ngIf="_name.errors?.required">Обязательное поле</span>
+            <span *ngIf="_name.errors?.min">Недопустимое количество символов</span>
+          </div>
+        </div>
+        <div class="input_form form_2">
           <label for="phone">Введите Ваш номер телефона</label>
-          <input type="text" name="phone" id="phone" placeholder="+7-(___)-___-__-__" formControlName="phones"
-          appPhoneMask>
+          <input type="text" name="phone" id="phone" class="form_input" placeholder="+7-(___)-___-__-__" 
+          formControlName="phones"appPhoneMask>
           <div class="input_form__valid" *ngIf="_phones.invalid || _phones.touched">
             <span *ngIf="_phones.errors?.required">Обязательное поле</span>
             <span *ngIf="_phones.errors?.min">Недопустимое количество символов</span>
@@ -170,8 +180,9 @@
         <img class="phone_img" src="../assets/images/phone_ringing.png" alt="">
         <p class="phone_tel">8-993-024-04-36</p>
       </div>
-      <button class="contacts_text">Заказать обратный звонок</button>
+      <button class="contacts_text" (click)="consult()">Заказать обратный звонок</button>
     </div>
   </footer>
-  <app-gratitude [done] ="done" (closeWindow)="dataClose($event)"></app-gratitude>
+  <app-gratitude [done] ="httpService.done" (closeWindow)="dataClose($event)"></app-gratitude>
+  <app-consultation [visibility] = "consultation" (visibleChanged)="consulting($event)"></app-consultation>
 </div>

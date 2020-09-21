@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Complects } from '../data';
+import { SendMailService } from 'src/app/services/send-mail.service';
 
 @Component({
   selector: 'app-order-complect',
@@ -15,11 +16,24 @@ export class OrderComplectComponent implements OnInit {
   slides = Complects;
   orderComplect: FormGroup;
   @Output() visibleChanged: EventEmitter<any> = new EventEmitter<any>()
+  private done: boolean = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private httpService: SendMailService) { }
 
   ngOnInit() {
     this.initForm();
+  }
+
+  get _phones() {
+    return this.orderComplect.get('phones')
+  }
+
+  get _name() {
+    return this.orderComplect.get('name')
+  }
+
+  get _checkbox() {
+    return this.orderComplect.get('checkbox')
   }
 
   initForm(): void {
@@ -28,14 +42,42 @@ export class OrderComplectComponent implements OnInit {
         [
           Validators.required,
           Validators.pattern(/[0-9]/),
-          Validators.maxLength(11)
+          Validators.maxLength(20),
+          Validators.minLength(16)
         ]
       ],
+      name: ['',
+        [
+          Validators.required,
+          Validators.maxLength(16),
+          Validators.minLength(5)
+        ]
+      ],
+      checkbox: ['',
+        [
+          Validators.required,
+        ]]
     });
   }
 
   close(side) {
     this.visibleChanged.emit(side);
+  }
+
+  submit(complect) {
+    this.httpService.getConsultation('http://localhost:3000/',
+      this.orderComplect.get('phones').value, this.orderComplect.get('name').value,
+       `Номер комплекта: ${complect + 1}`);
+       setTimeout(() => {
+        this.close(true);
+        this.httpService.done = true;
+      }, 2000);
+  }
+
+  dataClose(data) {
+    if (data === true) {
+      this.httpService.done = false;
+    }
   }
 
 }

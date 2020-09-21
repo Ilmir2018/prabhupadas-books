@@ -37,6 +37,7 @@ app.post("/", (req, res) => {
   }
 
   const info = `<ul>  
+  <li>Имя: ${req.body.name}</li>
   <li>Телефон: ${req.body.phone}</li>
   <li>Комплект: ${complect}</li>
 </ul>`;
@@ -58,5 +59,5 @@ app.post("/", (req, res) => {
 });
 
 app.listen(3000, "127.0.0.1", () => {
-  console.log("The server started on port 3000");
+  console.log("The server started on 3000");
 });

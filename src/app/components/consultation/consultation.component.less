@@ -1,0 +1,230 @@
+.consultation {
+    width           : 384px;
+    height          : 573px;
+    background-color: #ffffff;
+    border          : 2px solid #ffd200;
+    box-shadow      : 0px 0px 32px 8px rgba(255, 164, 0, 0.21);
+    margin-left     : 561px;
+    position        : fixed;
+    top             : 30px;
+    z-index         : 10;
+
+    .cont {
+        width           : 384px;
+        height          : 573px;
+        background-color: #ffffff;
+
+        .cont_text {
+            font-family   : Oranienbaum;
+            font-size     : 30px;
+            line-height   : 1.2;
+            font-weight   : 400;
+            text-transform: uppercase;
+            color         : #000000;
+            text-align    : center;
+            padding-top   : 35px;
+        }
+
+        form {
+            display       : flex;
+            flex-direction: column;
+            margin        : auto;
+            margin-top    : 38px;
+
+            .input_form {
+                display       : flex;
+                flex-direction: column;
+
+                label {
+                    font-family  : Oranienbaum;
+                    font-size    : 11.5px;
+                    line-height  : 1.2;
+                    font-weight  : 400;
+                    color        : #000000;
+                    text-align   : center;
+                    margin-bottom: 7px;
+                }
+
+                .form_input {
+                    font-family     : Oranienbaum;
+                    font-size       : 17.2px;
+                    line-height     : 1.2;
+                    font-weight     : 400;
+                    letter-spacing  : 0.3em;
+                    color           : #686868;
+                    width           : 239px;
+                    height          : 49px;
+                    background-color: #d1cfcf;
+                    outline         : none;
+                    border          : transparent;
+                    border-radius   : 10px;
+                    padding-left    : 30px;
+                    margin          : auto;
+                    margin-bottom: 18px;
+                }
+
+                .form_input.ng-invalid {
+                    border: solid red 2px;
+                }
+
+                .form_input.ng-valid {
+                    border: solid green 2px;
+                }
+
+                .input_form__valid {
+                    position   : absolute;
+                    margin-top : 83px;
+                    margin-left: 19px;
+                }
+
+            }
+
+            .form_2::after {
+                content         : '';
+                background-image: url(../../../assets/complects/phone_6401.png);
+                width           : 10px;
+                height          : 12px;
+                margin-top      : 37px;
+                margin-left     : 83px;
+                position        : absolute;
+            }
+
+            .form_1::after {
+                content         : '';
+                background-image: url(../../../assets/complects/user_6407.png);
+                width           : 8px;
+                height          : 12px;
+                margin-top      : 41px;
+                margin-left     : 83px;
+                position        : absolute;
+            }
+
+            .form_btn {
+
+                .order_a_set {
+                    text-align : center;
+                    position   : absolute;
+                    margin     : 0;
+                    align-items: center;
+                }
+
+                .order_a_set {
+                    display        : inline-flex;
+                    justify-content: center;
+                    align-items    : center;
+                    text-align     : center;
+                    width          : 238px;
+                    height         : 46px;
+                    border-radius  : 100px;
+                    padding        : 15px 35px;
+                    font-size      : 18px;
+                    text-decoration: none;
+                    color          : white;
+                    background     : rgb(231, 183, 62);
+                    background     : linear-gradient(174deg, rgba(231, 183, 62, 1) 0%, rgba(170, 103, 16, 1) 100%);
+                    box-shadow     : 0em 0.4em 5px rgba(122, 122, 122, 0.5);
+                    transition     : .3s;
+                    font-family    : Oranienbaum;
+                    font-size      : 13.8px;
+                    line-height    : 1.2;
+                    font-weight    : 400;
+                    text-transform : uppercase;
+                    color          : #000000;
+                    margin-left    : 75px;
+                    margin-top     : 12px;
+                    cursor         : pointer;
+                    border         : none;
+                    outline        : none;
+                }
+
+                .order_a_set img {
+                    margin-left: 11px;
+                }
+
+                .order_a_set:hover {
+                    opacity: 0.7;
+                }
+
+                .form_checkbox {
+                    margin-top : 63px;
+                    margin-left: 78px;
+
+                    input {
+                        width           : 13px;
+                        height          : 11px;
+                        background-color: #dfdfde;
+                    }
+
+                    .btn_checkbox {
+                        font-family     : Oranienbaum;
+                        font-size       : 11.5px;
+                        line-height     : 1.2;
+                        font-weight     : 400;
+                        color           : #000000;
+                        text-decoration : underline;
+                        background-color: transparent;
+                        border-color    : transparent;
+                        text-decoration : none;
+                        cursor          : pointer;
+                    }
+                }
+            }
+        }
+
+        .five_block_info {
+            display    : flex;
+            margin-left: 60px;
+            margin-top : 23px;
+
+            .five_block_name {
+                margin-left: 26px;
+                margin-top : 27px;
+
+                .autor_name {
+                    font-family   : Oranienbaum;
+                    font-size     : 19.8px;
+                    line-height   : 16px;
+                    font-weight   : 400;
+                    color         : #000000;
+                }
+
+                .position {
+                    font-family   : Oranienbaum;
+                    line-height   : 27px;
+                    font-weight   : 400;
+                    color         : #000000;
+                    font-size     : 16.5px;
+                    letter-spacing: -0.05em;
+                }
+            }
+        }
+    }
+
+    .close {
+        content          : "";
+        display          : block;
+        background-image : url(../../../assets/complects/close_2157.png);
+        background-repeat: no-repeat;
+        width            : 27px;
+        height           : 27px;
+        position         : absolute;
+        left             : 383px;
+        top              : -20px;
+        cursor           : pointer;
+        border           : transparent;
+        background-color : transparent;
+        outline          : none;
+        z-index          : 10;
+    }
+
+    .hidden_block {
+        height          : 5500px;
+        position        : absolute;
+        width           : 1520px;
+        z-index         : -1;
+        background-color: #333333;
+        opacity         : 0.4;
+        left            : -561px;
+        top             : -125px;
+    }
+}

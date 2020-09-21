@@ -158,7 +158,7 @@
                 display    : flex;
                 margin     : auto;
                 margin-top : 30px;
-                margin-left: 100px;
+                margin-left: 33px;
 
                 .input_form {
                     display       : flex;
@@ -174,31 +174,55 @@
                         margin-bottom: 7px;
                     }
 
-                    #phone {
+                    .form_input {
                         font-family     : Oranienbaum;
-                        font-size       : 17.2px;
+                        font-size       : 12.1px;
                         line-height     : 1.2;
                         font-weight     : 400;
                         letter-spacing  : 0.3em;
                         color           : #686868;
-                        width           : 239px;
+                        width           : 183px;
                         height          : 49px;
                         background-color: #d1cfcf;
                         outline         : none;
                         border          : transparent;
                         border-radius   : 10px;
                         padding-left    : 30px;
+                        margin-left     : 13px;
+                    }
+
+                    .form_input.ng-invalid {
+                        border: solid red 2px;
+                    }
+
+                    .form_input.ng-valid {
+                        border: solid green 2px;
+                    }
+
+                    .input_form__valid {
+                        position   : absolute;
+                        margin-top : 83px;
+                        margin-left: 19px;
                     }
 
                 }
 
-                .input_form::after {
+                .form_2::after {
                     content         : '';
-                    background-image: url(../../../assets/complects/phone_2172.png);
-                    width           : 12px;
+                    background-image: url(../../../assets/complects/phone_6401.png);
+                    width           : 10px;
                     height          : 12px;
                     margin-top      : -30px;
-                    margin-left     : 9px;
+                    margin-left     : 20px;
+                }
+
+                .form_1::after {
+                    content         : '';
+                    background-image: url(../../../assets/complects/user_6407.png);
+                    width           : 8px;
+                    height          : 12px;
+                    margin-top      : -30px;
+                    margin-left     : 26px;
                 }
 
                 .form_btn {
@@ -210,14 +234,7 @@
                         align-items: center;
                     }
 
-                    .order_a_set2 {
-                        text-align : center;
-                        position   : absolute;
-                        margin     : 0;
-                        align-items: center;
-                    }
-
-                    .order_a_set a {
+                    .order_a_set {
                         display        : inline-flex;
                         justify-content: center;
                         align-items    : center;
@@ -241,49 +258,15 @@
                         text-transform : uppercase;
                         color          : #000000;
                         margin-left    : 51px;
+                        outline        : none;
+                        border         : none;
                     }
 
-                    .order_a_set2 a {
-                        display        : inline-flex;
-                        justify-content: center;
-                        align-items    : center;
-                        text-align     : center;
-                        width          : 238px;
-                        height         : 46px;
-                        border-radius  : 100px;
-                        padding        : 15px 35px;
-                        font-size      : 18px;
-                        text-decoration: none;
-                        margin         : 20px;
-                        color          : white;
-                        background     : rgb(231, 183, 62);
-                        background     : linear-gradient(174deg, rgba(231, 183, 62, 1) 0%, rgba(170, 103, 16, 1) 100%);
-                        box-shadow     : 0em 0.4em 5px rgba(122, 122, 122, 0.5);
-                        transition     : .3s;
-                        font-family    : Oranienbaum;
-                        font-size      : 13.8px;
-                        line-height    : 1.2;
-                        font-weight    : 400;
-                        text-transform : uppercase;
-                        color          : #000000;
-                        margin-left    : 37px;
-                        margin-top     : 31px;
-                        margin-bottom  : 0;
-                    }
-
-                    .order_a_set a img {
+                    .order_a_set img {
                         margin-left: 11px;
                     }
 
-                    .order_a_set a:hover {
-                        opacity: 0.7;
-                    }
-
-                    .order_a_set2 a img {
-                        margin-left: 11px;
-                    }
-
-                    .order_a_set2 a:hover {
+                    .order_a_set:hover {
                         opacity: 0.7;
                     }
 
@@ -374,7 +357,7 @@
             form {
                 display       : flex;
                 flex-direction: column;
-                margin-top    : 60px;
+                margin-top    : 36px;
                 margin-left   : 100px;
 
                 .input_form {
@@ -391,7 +374,7 @@
                         margin-bottom: 7px;
                     }
 
-                    #phone {
+                    .form_input {
                         font-family     : Oranienbaum;
                         font-size       : 17.2px;
                         line-height     : 1.2;
@@ -405,21 +388,48 @@
                         border          : transparent;
                         border-radius   : 10px;
                         padding-left    : 30px;
+                        margin-bottom   : 10px;
+                    }
+
+                    .form_input.ng-invalid {
+                        border: solid red 2px;
+                    }
+
+                    .form_input.ng-valid {
+                        border: solid green 2px;
+                    }
+
+                    .input_form__valid {
+                        position   : absolute;
+                        margin-top : 83px;
+                        margin-left: 19px;
                     }
 
                 }
 
-                .input_form::after {
+
+                .form_2::after {
                     content         : '';
-                    background-image: url(../../../assets/complects/phone_2172.png);
-                    width           : 12px;
+                    background-image: url(../../../assets/complects/phone_6401.png);
+                    width           : 10px;
                     height          : 12px;
-                    margin-top      : -30px;
-                    margin-left     : 9px;
+                    position        : absolute;
+                    margin-top      : 42px;
+                    margin-left     : 13px;
+                }
+
+                .form_1::after {
+                    content         : '';
+                    background-image: url(../../../assets/complects/user_6407.png);
+                    width           : 8px;
+                    height          : 12px;
+                    position        : absolute;
+                    margin-top      : 42px;
+                    margin-left     : 13px;
                 }
 
                 .form_btn {
-                    margin-top: 39px;
+                    margin-top: 21px;
 
                     .order_a_set {
                         text-align : center;
@@ -428,14 +438,7 @@
                         align-items: center;
                     }
 
-                    .order_a_set2 {
-                        text-align : center;
-                        position   : absolute;
-                        margin     : 0;
-                        align-items: center;
-                    }
-
-                    .order_a_set a {
+                    .order_a_set {
                         display        : inline-flex;
                         justify-content: center;
                         align-items    : center;
@@ -457,49 +460,18 @@
                         font-weight    : 400;
                         text-transform : uppercase;
                         color          : #000000;
+                        cursor: pointer;
+                        outline: none;
                     }
 
-                    .order_a_set2 a {
-                        display        : inline-flex;
-                        justify-content: center;
-                        align-items    : center;
-                        text-align     : center;
-                        width          : 238px;
-                        height         : 46px;
-                        border-radius  : 100px;
-                        padding        : 15px 35px;
-                        font-size      : 18px;
-                        text-decoration: none;
-                        color          : white;
-                        background     : rgb(231, 183, 62);
-                        background     : linear-gradient(174deg, rgba(231, 183, 62, 1) 0%, rgba(170, 103, 16, 1) 100%);
-                        box-shadow     : 0em 0.4em 5px rgba(122, 122, 122, 0.5);
-                        transition     : .3s;
-                        font-family    : Oranienbaum;
-                        font-size      : 13.8px;
-                        line-height    : 1.2;
-                        font-weight    : 400;
-                        text-transform : uppercase;
-                        color          : #000000;
-                        margin-top     : 31px;
-                        margin-bottom  : 0;
-                    }
-
-                    .order_a_set a img {
+                    .order_a_set img {
                         margin-left: 11px;
                     }
 
-                    .order_a_set a:hover {
+                    .order_a_set:hover {
                         opacity: 0.7;
                     }
 
-                    .order_a_set2 a img {
-                        margin-left: 11px;
-                    }
-
-                    .order_a_set2 a:hover {
-                        opacity: 0.7;
-                    }
 
                     .form_checkbox {
                         margin-top: 58px;
