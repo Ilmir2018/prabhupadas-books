@@ -1,34 +1,35 @@
 .slider {
     display          : flex;
     justify-content  : center;
-    margin-left      : 300px;
     height           : 539px;
     padding-top      : 30px;
-    background-image : url(../../../assets/images/Фон_карточек.png);
     background-repeat: no-repeat;
 
 
-    .left_arrow {
-        background       : transparent;
-        background-image : url(../../../assets/images/left_arrow.png);
-        background-repeat: no-repeat;
-        width            : 32px;
-        height           : 32px;
-        border           : none;
-        cursor           : pointer;
-        margin-top       : 218px;
-        margin-left      : -209px;
-    }
-
-
     .slider_content {
-        display   : flex;
-        margin-top: 28px;
+        display         : flex;
+        margin-top      : 28px;
+        width           : 984px;
+        height          : 539px;
+        background-image: url(../../../assets/images/Фон_карточек.png);
+
+        .left_arrow {
+            background       : transparent;
+            background-image : url(../../../assets/images/left_arrow.png);
+            background-repeat: no-repeat;
+            width            : 32px;
+            height           : 32px;
+            border           : none;
+            cursor           : pointer;
+            margin-top       : 218px;
+            margin-left      : 90px;
+            z-index: 2;
+        }
 
         .slider_image {
             width     : 352px;
             height    : 234px;
-            margin-top: 50px;
+            margin-top: 147px;
         }
 
         .books_content {
@@ -41,6 +42,7 @@
                 color        : #000000;
                 margin       : 0;
                 margin-bottom: -22px;
+                margin-top   : 86px;
             }
 
             .books_content__title2 {
@@ -61,7 +63,7 @@
                 letter-spacing: 0.025em;
                 color         : #000000;
                 margin-bottom : 40px;
-                width: 341px;
+                width         : 341px;
             }
 
             hr {
@@ -71,7 +73,7 @@
             }
 
             .count_books {
-                display: flex;
+                display        : flex;
                 justify-content: center;
 
                 .book {
@@ -143,7 +145,7 @@
                         color          : #000000;
                         margin-left    : -37px;
                         margin-top     : 15px;
-                        cursor: pointer;
+                        cursor         : pointer;
                     }
 
                     .order_a_set a img {
@@ -193,27 +195,33 @@
                 }
             }
         }
+
+        button:active,
+        button:focus {
+            outline: none;
+        }
+
+        button::-moz-focus-inner {
+            border: 0;
+        }
+
+        .right_arrow {
+            background       : transparent;
+            background-image : url(../../../assets/images/right_arrow.png);
+            background-repeat: no-repeat;
+            width            : 32px;
+            height           : 32px;
+            border           : none;
+            cursor           : pointer;
+            margin-top       : 218px;
+            z-index          : 2;
+        }
     }
 
-    button:active,
-    button:focus {
-        outline: none;
-    }
-
-    button::-moz-focus-inner {
-        border: 0;
-    }
-
-    .right_arrow {
-        background       : transparent;
-        background-image : url(../../../assets/images/right_arrow.png);
-        background-repeat: no-repeat;
-        width            : 32px;
-        height           : 32px;
-        border           : none;
-        cursor           : pointer;
-        margin-top       : 218px;
-        z-index          : 2;
+    .prabhupada {
+        position   : absolute;
+        margin-left: 1000px;
+        margin-top : -64px;
     }
 
 }

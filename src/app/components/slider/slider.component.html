@@ -1,6 +1,6 @@
 <div class="slider">
-  <button (click)='changeImages(false)' class="left_arrow"></button>
   <div class="slider_content">
+    <button (click)='changeImages(false)' class="left_arrow"></button>
       <img class="slider_image" [src]=slides[count].image alt="">
       <article class="books_content">
           <h1 class="books_content__title1">Комплект</h1><br><h1 class="books_content__title2">{{slides[count].title}}</h1>
@@ -29,8 +29,9 @@
               </div>
           </div>
       </article>
+      <button (click)='changeImages(true)' class="right_arrow"></button>
   </div>
-  <button (click)='changeImages(true)' class="right_arrow"></button>
+  <img class="prabhupada" src="../assets/images/shrila_prabkhupada_497.png" alt="">
 </div>
 <app-more-detailed [visibility] = "visible" [complect] = "count" (visibleChanged)="dataChangeHandler($event)"></app-more-detailed>
 <app-order-complect [visibility] = "orderComplect" [complect] = "count" (visibleChanged)="orderCloseHandler($event)"></app-order-complect> 

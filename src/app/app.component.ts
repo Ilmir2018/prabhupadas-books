@@ -2,11 +2,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SliderComponent } from './components/slider/slider.component';
 import { SendMailService } from './services/send-mail.service';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
 
