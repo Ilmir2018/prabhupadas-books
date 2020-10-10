@@ -30,6 +30,10 @@
             .header_content_small {
                 display: none;
             }
+
+            .header_content__slider {
+                display: none;
+            }
         }
 
         .second_block {
@@ -152,20 +156,64 @@
             }
 
             .header_content_small {
-                display   : block;
-                margin-top: 472px;
+                display        : flex;
+                margin-top     : 450px;
+                align-items    : center;
+                justify-content: center;
+
+                .left_btn {
+                    background      : transparent;
+                    background-image: url(../assets/mobile/str_lev.png);
+                    width           : 23px;
+                    height          : 28px;
+                    border          : none;
+                    outline         : none;
+                }
 
                 .icons {
-                    padding-left: 69px;
+                    padding: 0 15px;
+                    width  : 316px;
 
                     .icon_images {
                         margin       : auto;
                         margin-bottom: 26px;
+                        width        : 66px;
+                        height       : 53px;
                     }
 
                     .icon_text {
                         text-align: center;
                     }
+                }
+
+                .right_btn {
+                    background      : transparent;
+                    background-image: url(../assets/mobile/str_pr.png);
+                    width           : 23px;
+                    height          : 28px;
+                    border          : none;
+                    outline         : none;
+                }
+            }
+
+            .header_content__slider {
+                display        : flex;
+                justify-content: center;
+                margin-top     : 33px;
+
+                .little_slide {
+                    width           : 11px;
+                    height          : 11px;
+                    background-color: #9a9a9a;
+                    border-radius   : 50%;
+                    margin-left     : 13px;
+                }
+
+                .little_slide.active {
+                    width           : 11px;
+                    height          : 11px;
+                    background-color: #ff9c00;
+                    border-radius   : 50%;
                 }
             }
         }
@@ -177,7 +225,7 @@
 
                 .choose_complect {
                     margin-right: 0;
-                    margin-top  : 89px;
+                    margin-top  : 146px;
                 }
             }
 
@@ -194,8 +242,9 @@
             }
 
             .third_block_title {
-                margin-bottom: 0;
+                margin-bottom: 91px;
                 margin-right : 0;
+                margin-top   : 95px;
             }
         }
 
@@ -363,24 +412,50 @@
             }
 
             .header_content_small {
-                display   : block;
-                margin-top: 0;
+                display        : flex;
+                margin-top     : 42px;
+                align-items    : center;
+                justify-content: center;
+
+                .left_btn {
+                    background      : transparent;
+                    background-image: url(../assets/mobile/str_lev.png);
+                    width           : 23px;
+                    height          : 28px;
+                    border          : none;
+                    outline         : none;
+                }
 
                 .icons {
-                    padding-left: 0;
+                    padding: 0 15px;
+                    width  : 316px;
+
+                    .icon_images {
+                        margin       : auto;
+                        margin-bottom: 26px;
+                        width        : 66px;
+                        height       : 53px;
+                    }
+
+                    .icon_text {
+                        text-align: center;
+                    }
+                }
+
+                .right_btn {
+                    background      : transparent;
+                    background-image: url(../assets/mobile/str_pr.png);
+                    width           : 23px;
+                    height          : 28px;
+                    border          : none;
+                    outline         : none;
                 }
             }
         }
 
 
         .second_block {
-
-            .slider {
-
-                .slider_content {
-                    width: 588px;
-                }
-            }
+            background-image: none;
         }
 
         .third_block {

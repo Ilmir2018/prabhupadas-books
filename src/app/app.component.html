@@ -22,7 +22,7 @@
       <p class="header_content_title__p">«Тот, кто сможет читать эти книги с открытым сердцем,
         не<br> останется равнодушным,независимо от конфессиональной<br>
         прнадлежности, веры или философских убеждений».</p>
-      <img class="small_books" src="../assets/images/1экран.png" alt="">
+        <img class="small_books" src="../assets/mobile/small_books.png" alt="">
       <button class="order_a_set" (click)="scroll(1)">ВЫБРАТЬ КОМПЛЕКТ КНИГ
         <img src="../assets/images/books.png" alt=""></button>
     </div>
@@ -33,22 +33,28 @@
           с санскрита с транслитерацией</p>
       </div>
       <div class="icons">
-        <img class="icon_images" src="../assets/images/study_49.png" alt="">
+        <img class="icon_images" src="../assets/images/letter_51.png" alt="">
         <p class="icon_text">Приемственность учителей<br>
           и учеников которой более 5000 лет</p>
       </div>
       <div class="icons">
-        <img class="icon_images" src="../assets/images/study_49.png" alt="">
+        <img class="icon_images" src="../assets/images/mentor_50.png" alt="">
         <p class="icon_text">С отзывами и рекомендациями<br>
           мировых учёных и политиков</p>
       </div>
     </div>
     <div class="header_content_small">
+      <button class="left_btn" (click) = "changeLittleSlider(0)"></button>
       <div class="icons">
-        <img class="icon_images" src="../assets/images/study_49.png" alt="">
-        <p class="icon_text">Перевод на русский язык<br>
-          с санскрита с транслитерацией</p>
+        <img class="icon_images" [src]=icons[count].icon alt="">
+        <p class="icon_text">{{ icons[count].title }}</p>
       </div>
+      <button class="right_btn" (click) = "changeLittleSlider(1)"></button>
+    </div>
+    <div class="header_content__slider">
+      <div class="little_slide active" (onclick)="littleSlide(1)"></div>
+      <div class="little_slide" (onclick)="littleSlide(2)"></div>
+      <div class="little_slide" (onclick)="littleSlide(3)"></div>
     </div>
   </header>
   <section class="second_block">

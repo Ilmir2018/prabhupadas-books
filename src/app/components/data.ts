@@ -265,3 +265,18 @@ export const Complects = [
         image: '../../../assets/complects/vse_3476.png',
     },
 ]
+
+export const iconsContent = [
+    {
+        icon: "../assets/images/study_49.png",
+        title: "Перевод на русский язык с санскрита с транслитерацией"
+    },
+    {
+        icon: "../assets/images/letter_51.png",
+        title: "Приемственность учителей и учеников которой более 5000 лет"
+    },
+    {
+        icon: "../assets/images/mentor_50.png",
+        title: "С отзывами и рекомендациями мировых учёных и политиков"
+    }
+]

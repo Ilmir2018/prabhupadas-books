@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SliderComponent } from './components/slider/slider.component';
 import { SendMailService } from './services/send-mail.service';
 import { ViewEncapsulation } from '@angular/core';
+import { iconsContent } from '../app/components/data';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,12 @@ import { ViewEncapsulation } from '@angular/core';
 export class AppComponent implements OnInit {
 
   signUpForm: FormGroup;
+  icons = iconsContent;
+  count = 0;
   visible: boolean;
   clicks: number = 0;
   slideIndex: number = 1;
+  littleSlideIndex: number = 1;
   consultation: boolean = false;
   error: any;
 
@@ -46,6 +50,22 @@ export class AppComponent implements OnInit {
     return this.signUpForm.get('checkbox')
   }
 
+  changeImages(side: any) {
+    if (side === false) {
+      if (this.count > 0) {
+        this.count--;
+      } else if (this.count <= 0) {
+        this.count = this.icons.length - 1;
+      }
+    } else {
+      if(this.count < this.icons.length - 1) {
+        this.count++;
+      } else {
+        this.count = 0;
+      }
+    }
+  }
+
 
   /**
    * Функция для смены класса для кружочков, событие передаётся из дочернего класса app-slider
@@ -59,9 +79,22 @@ export class AppComponent implements OnInit {
     }
   }
 
+  changeLittleSlider(data) {
+    if (data === 1) {
+      this.showLittleSlides(this.littleSlideIndex += 1);
+    } else {
+      this.showLittleSlides(this.littleSlideIndex -= 1);
+    }
+    this.changeImages(data);
+  }
+
   //Текущий слайд
   currentSlide(n) {
     this.showSlides(this.slideIndex = n);
+  }
+
+  littleSlide(n) {
+    this.showLittleSlides(this.littleSlideIndex = n);
   }
 
 
@@ -79,6 +112,22 @@ export class AppComponent implements OnInit {
       dots[i].className = dots[i].className.replace(" active", "");
     }
     dots[this.slideIndex - 1].className += " active";
+  }
+
+  //Функция смены класса
+  showLittleSlides(n) {
+    let i;
+    let dots = document.getElementsByClassName("little_slide");
+    if (n > dots.length) {
+      this.littleSlideIndex = 1
+    }
+    if (n < 1) {
+      this.littleSlideIndex = dots.length
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    dots[this.littleSlideIndex - 1].className += " active";
   }
 
   //Функция скроллинга по странице
