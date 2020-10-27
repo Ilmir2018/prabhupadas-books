@@ -1,12 +1,12 @@
 <div class="wrapper">
-  <header>
+  <header id="1">
     <div class="container">
       <a href="#" class="logo"><img src="../assets/images/logotip_bd_902.png" alt=""></a>
       <ul class="mnu_top">
-        <li><button (click)="scroll(0)">Главная</button></li>
-        <li><button (click)="scroll(1)">Комплекты</button></li>
-        <li><button (click)="scroll(2)">Доставка</button></li>
-        <li><button (click)="scroll(3)">Преимущества</button></li>
+        <li><button (click)="scroll(1)">Главная</button></li>
+        <li><button (click)="scroll(2)">Комплекты</button></li>
+        <li><button (click)="scroll(3)">Доставка</button></li>
+        <li><button (click)="scroll(4)">Преимущества</button></li>
       </ul>
       <div class="contacts">
         <div class="phone">
@@ -23,7 +23,7 @@
         не<br> останется равнодушным,независимо от конфессиональной<br>
         прнадлежности, веры или философских убеждений».</p>
         <img class="small_books" src="../assets/mobile/small_books.png" alt="">
-      <button class="order_a_set" (click)="scroll(1)">ВЫБРАТЬ КОМПЛЕКТ КНИГ
+      <button class="order_a_set" (click)="scroll(2)">ВЫБРАТЬ КОМПЛЕКТ КНИГ
         <img src="../assets/images/books.png" alt=""></button>
     </div>
     <div class="header_content_icons">
@@ -61,7 +61,7 @@
     <div class="second_block__title">
       <h1 class="choose_complect">выбери свой комплект</h1>
     </div>
-    <app-slider (dataChanged)="dataChangeHandler($event)"></app-slider>
+    <app-slider  id="2" (dataChanged)="dataChangeHandler($event)"></app-slider>
     <div class="slider_2">
       <div class="slide active" (onclick)="currentSlide(1)"></div>
       <div class="slide" (onclick)="currentSlide(2)"></div>
@@ -71,7 +71,7 @@
       <div class="slide" (onclick)="currentSlide(6)"></div>
     </div>
   </section>
-  <section class="third_block">
+  <section class="third_block" id="4">
     <h1 class="third_block_title">ПРЕИМУЩЕСТВА КНИГ</h1>
     <article class="first_book">
       <div class="first_book_cont">
@@ -122,11 +122,12 @@
   </section>
   <section class="fourth_block">
     <div class="fourth_block__title">
-      <h1>ДОСТАВИМ КНИГИ В ЛЮБУЮ ТОЧКУ СНГ</h1>
+      <h1 id="3">ДОСТАВИМ КНИГИ В ЛЮБУЮ ТОЧКУ СНГ</h1>
     </div>
+    <img class="fourth_block__image" src="../assets/mobile/лл.png" alt="">
   </section>
   <section class="five_block">
-    <h1 class="five_block_title">получите консультацию по комплектам, книг,<br>
+    <h1 class="five_block_title">получите консультацию по комплектам книг,<br>
       либо соберите свой вариант комплекта</h1>
     <div class="five_block_info">
       <img class="five_block_img" src="../assets/images/sloy_24_979.png" alt="">

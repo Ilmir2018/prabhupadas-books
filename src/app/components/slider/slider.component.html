@@ -1,37 +1,72 @@
 <div class="slider">
-  <div class="slider_content">
-    <button (click)='changeImages(false)' class="left_arrow"></button>
-      <img class="slider_image" [src]=slides[count].image alt="">
-      <article class="books_content">
-          <h1 class="books_content__title1">Комплект</h1><br><h1 class="books_content__title2">{{slides[count].title}}</h1>
-          <p class="books_content__text">{{slides[count].text}}</p>
-          <hr>
-          <div class="count_books">
-              <img class="book" src="../assets/images/books_kopiya_410.png" alt="">
-              <p class="count_books__title">{{slides[count].countBooks}}</p>
-              <img *ngIf="count!=5" class="book" src="../assets/images/books_kopiya_410.png" alt="">
-              <p class="count_books__title">{{slides[count].countSongs}}</p>
-          </div>
-          <hr>
-          <div class="choosing_kit">
-              <button (click)="detailed(i)" class="choosing_kit__btn">Подробнее о комплекте книг</button>
-              <div class="choosing_btn">
-                  <p class="order_a_set"><a (click)="orderVisible(i)">ЗАКАЗАТЬ КОМПЛЕКТ<img
-                              src="../assets/images/books.png" alt=""></a></p>
-                  <div class="choosing_text">
-                      <div class="cost">
-                          <p class="cost__p">{{slides[count].price}}</p>
-                          <p class="text__p">руб.</p>
-                      </div>
-                      <p *ngIf="count==6" class="cost_text">Без доставки</p>
-                      <p *ngIf="count!=6" class="cost_text">Доставка Бесплатно</p>
-                  </div>
-              </div>
-          </div>
-      </article>
-      <button (click)='changeImages(true)' class="right_arrow"></button>
-  </div>
-  <img class="prabhupada" src="../assets/images/shrila_prabkhupada_497.png" alt="">
+    <div class="books_content__textblock_mobile">
+        <h1 class="books_content__title1">Комплект</h1><br>
+        <h1 class="books_content__title2">{{slides[count].title}}</h1>
+        <p class="books_content__text">{{slides[count].text}}</p>
+    </div>
+    <div class="slider_content">
+        <button (click)='changeImages(false)' class="left_arrow"></button>
+        <img class="slider_image" [src]=slides[count].image alt="">
+        <article class="books_content">
+            <div class="books_content__textblock">
+                <h1 class="books_content__title1">Комплект</h1><br>
+                <h1 class="books_content__title2">{{slides[count].title}}</h1>
+                <p class="books_content__text">{{slides[count].text}}</p>
+            </div>
+                <hr>
+                <div class="count_books">
+                    <img class="book" src="../assets/images/books_kopiya_410.png" alt="">
+                    <p class="count_books__title">{{slides[count].countBooks}}</p>
+                    <img *ngIf="count!=5" class="book" src="../assets/images/books_kopiya_410.png" alt="">
+                    <p class="count_books__title">{{slides[count].countSongs}}</p>
+                </div>
+                <hr>
+            <div class="choosing_kit">
+                <button (click)="detailed(slide)" class="choosing_kit__btn">Подробнее о комплекте книг</button>
+                <div class="choosing_btn">
+                    <p class="order_a_set"><a (click)="orderVisible(slide)">ЗАКАЗАТЬ КОМПЛЕКТ<img
+                                src="../assets/images/books.png" alt=""></a></p>
+                    <div class="choosing_text">
+                        <div class="cost">
+                            <p class="cost__p">{{slides[count].price}}</p>
+                            <p class="text__p">руб.</p>
+                        </div>
+                        <p *ngIf="count==6" class="cost_text">Без доставки</p>
+                        <p *ngIf="count!=6" class="cost_text">Доставка Бесплатно</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <button (click)='changeImages(true)' class="right_arrow"></button>
+    </div>
+    <div class="count_block__withhr">
+        <hr>
+        <div class="count_books">
+            <img class="book" src="../assets/images/books_kopiya_410.png" alt="">
+            <p class="count_books__title">{{slides[count].countBooks}}</p>
+            <img *ngIf="count!=5" class="book" src="../assets/images/books_kopiya_410.png" alt="">
+            <p class="count_books__title">{{slides[count].countSongs}}</p>
+        </div>
+        <hr>
+    </div>
+    <div class="choosing_text__mobile">
+        <div class="cost">
+            <p class="cost__p">{{slides[count].price}}</p>
+            <p class="text__p">Р</p>
+        </div>
+        <p *ngIf="count==6" class="cost_text">Без доставки</p>
+        <p *ngIf="count!=6" class="cost_text">Доставка Бесплатно</p>
+    </div>
+    <div class="choosing_kit_mobile">
+        <div class="choosing_btn">
+            <p class="order_a_set"><a (click)="orderVisible(slide)">ЗАКАЗАТЬ КОМПЛЕКТ<img
+                        src="../assets/images/books.png" alt=""></a></p>
+        </div>
+        <button (click)="detailed(slide)" class="choosing_kit__btn">Подробнее о комплекте книг</button>
+    </div>
+    <img class="prabhupada" src="../assets/images/shrila_prabkhupada_497.png" alt="">
 </div>
-<app-more-detailed [visibility] = "visible" [complect] = "count" (visibleChanged)="dataChangeHandler($event)"></app-more-detailed>
-<app-order-complect [visibility] = "orderComplect" [complect] = "count" (visibleChanged)="orderCloseHandler($event)"></app-order-complect> 
+<app-more-detailed [visibility]="this.httpService.moreDetailed" [complect]="count" (visibleChanged)="dataChangeHandler($event)">
+</app-more-detailed>
+<app-order-complect [visibility]="httpService.orderComplect" [complect]="count" (visibleChanged)="orderCloseHandler($event)">
+</app-order-complect>

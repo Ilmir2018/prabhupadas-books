@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { Slider } from '../slider.object';
 import { Slides } from '../data';
 import { EventEmitter } from '@angular/core';
+import { SendMailService } from 'src/app/services/send-mail.service';
 
 @Component({
   selector: 'app-slider',
@@ -12,12 +13,11 @@ export class SliderComponent implements OnInit {
 
   slides: Slider[] = Slides;
   count = 0;
-  visible: boolean = false;
-  orderComplect: boolean = false;
+  visible: boolean = true;
   slide: number = 1;
   @Output() dataChanged: EventEmitter<any> = new EventEmitter<any>()
 
-  constructor() { }
+  constructor(public httpService: SendMailService) { }
 
   ngOnInit() {
   }
@@ -41,24 +41,24 @@ export class SliderComponent implements OnInit {
   }
 
   detailed(slide: number) {
-    this.visible = true;
+    this.httpService.moreDetailed = true;
     this.slide = slide;
   }
 
   orderVisible(slide: number) {
-    this.orderComplect = true;
+    this.httpService.orderComplect = true;
     this.slide = slide;
   }
 
   dataChangeHandler(data) {
     if (data === true) {
-      this.visible = false;
+      this.httpService.moreDetailed = false;
     }
   }
   
   orderCloseHandler(data) {
     if (data === true) {
-      this.orderComplect = false;
+      this.httpService.orderComplect = false;
     }
   }
 }

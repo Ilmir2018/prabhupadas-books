@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
 
   @ViewChild(SliderComponent) viewChild: SliderComponent
 
-  constructor(private fb: FormBuilder, private httpService: SendMailService) {
+  constructor(private fb: FormBuilder, public httpService: SendMailService) {
 
   }
 
@@ -131,13 +131,11 @@ export class AppComponent implements OnInit {
   }
 
   //Функция скроллинга по странице
-  scroll(multiplier) {
-    window.scrollTo(
-      {
-        top: 1000 * multiplier,
-        behavior: "smooth"
-      }
-    );
+  scroll(elem) {
+    document.getElementById(elem).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
   }
 
   initForm(): void {
@@ -173,8 +171,8 @@ export class AppComponent implements OnInit {
   }
 
   submit() {
-    this.httpService.getConsultation('http://localhost:3000/',
-      this.signUpForm.get('phones').value, this.signUpForm.get('name').value, 'Комплект');
+    this.httpService.getConsultation('http://prabhupada-books.ru:3000',
+      this.signUpForm.get('phones').value, this.signUpForm.get('name').value, 'Консультация');
       this.httpService.done = true;
   }
 

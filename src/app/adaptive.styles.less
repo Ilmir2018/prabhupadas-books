@@ -39,6 +39,9 @@
         .second_block {
 
             .slider {
+                .books_content__textblock_mobile {
+                    display: none;
+                }
 
                 .prabhupada {
                     display: none;
@@ -48,6 +51,13 @@
 
         .third_block {
             background-image: none;
+        }
+
+        .fourth_block {
+
+            .fourth_block__image {
+                display: none;
+            }
         }
 
         footer {
@@ -232,6 +242,10 @@
             .slider {
                 padding-top: 0;
                 margin-top : 0px;
+
+                .books_content__textblock_mobile {
+                    display: none;
+                }
             }
         }
 
@@ -257,6 +271,10 @@
                     margin-top  : 0;
                     margin-right: 0;
                 }
+            }
+
+            .fourth_block__image {
+                display: none;
             }
         }
 
@@ -351,7 +369,7 @@
     }
 }
 
-@media screen and (max-device-width: 827px) {
+@media screen and (max-device-width: 985px) {
 
     .wrapper {
 
@@ -456,6 +474,10 @@
 
         .second_block {
             background-image: none;
+
+            .slider_2 {
+                margin-top: 33px;
+            }
         }
 
         .third_block {
@@ -464,6 +486,584 @@
                 flex-direction: column;
             }
         }
+
+        .fourth_block {
+
+            .fourth_block__image {
+                display: none;
+            }
+        }
     }
 
+}
+
+@media screen and (max-device-width: 824px) {
+
+    .wrapper {
+
+        .fourth_block {
+            background-image: none;
+            display         : flex;
+            flex-direction  : column;
+            align-items     : center;
+
+            .fourth_block__title {
+
+                h1 {
+                    font-size: 30px;
+                }
+            }
+
+            .fourth_block__image {
+                display: block;
+            }
+        }
+
+        .five_block {
+            width : 590px;
+            height: 700px;
+            margin-top: -150px;
+
+            .five_block_title {
+                font-size : 23px;
+                text-align: center;
+            }
+
+            .five_block_info {
+                align-items: center;
+                margin-left: 109px;
+                margin-top : 33px;
+
+                .five_block_img {
+                    width: 110px;
+                }
+
+                .five_block_name {
+                    margin-left: 27px;
+                }
+            }
+
+            form {
+                display       : flex;
+                flex-direction: column;
+
+                .input_form {
+                    margin-bottom: 91px;
+                    align-items  : center;
+
+                    .form_input {
+                        font-size: 15px;
+                    }
+
+                    .input_form__valid {
+                        margin-top: 81px;
+                    }
+                }
+
+                .form_btn {
+                    margin-left: 137px;
+                    margin-top : -34px;
+
+                    .form_checkbox__valid {
+                        display: none;
+                    }
+                }
+
+                .form_1::after {
+                    margin-right: 180px;
+                    margin-left : 0;
+                }
+
+                .form_2::after {
+                    margin-right: 180px;
+                    margin-left : 0;
+                }
+            }
+        }
+
+        footer {
+
+            .container {
+                flex-direction: column;
+
+                .footer_img {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-device-width: 620px) {
+
+    .wrapper {
+
+        header {
+
+            .header_content {
+
+                .header_content_title {
+                    font-size    : 62px;
+                    margin-bottom: 6px;
+                }
+
+                .header_content_title2 {
+                    font-size    : 22px;
+                    margin-bottom: 0px;
+                }
+
+                .header_content_title__p {
+                    font-size  : 9px;
+                    line-height: 15px;
+                }
+            }
+        }
+
+        .third_block {
+
+
+            .third_block_title {
+                font-size: 32px;
+            }
+
+            .first_book {
+
+                .first_book_cont {
+
+                    .first_book_number {
+                        font-size : 85px;
+                        margin-top: 8px;
+                    }
+
+                    .first_book_text {
+
+                        .first_book_text_p1 {
+                            font-size  : 18px;
+                            width      : 157px;
+                            margin-left: 97px;
+                        }
+
+                        .first_book_text_p2 {
+                            margin-left: 36px;
+                        }
+
+                        .first_book_img {
+                            width     : 346px;
+                            margin-top: -88px;
+                        }
+                    }
+                }
+            }
+
+            .two_books {
+
+                .second_book {
+                    margin-left: 38px;
+
+                    .first_book_cont {
+
+                        .second_book_number {
+                            font-size   : 85px;
+                            margin-top  : 8px;
+                            margin-right: -66px;
+                        }
+
+                        .first_book_text {
+
+                            .first_book_text_p1 {
+                                font-size  : 18px;
+                                width      : 157px;
+                                margin-left: 97px;
+                            }
+
+                            .first_book_text_p2 {
+                                margin-left: 36px;
+                            }
+
+                            .second_book_img {
+                                width     : 346px;
+                                margin-top: -88px;
+                            }
+                        }
+                    }
+                }
+
+                .third_book {
+                    margin-left: 38px;
+
+                    .first_book_cont {
+
+                        .third_book_number {
+                            font-size   : 85px;
+                            margin-top  : 8px;
+                            margin-right: -66px;
+                        }
+
+                        .first_book_text {
+
+                            .first_book_text_p1 {
+                                font-size  : 18px;
+                                width      : 157px;
+                                margin-left: 97px;
+                            }
+
+                            .first_book_text_p2 {
+                                margin-left: 36px;
+                            }
+
+                            .third_book_img {
+                                width     : 346px;
+                                margin-top: -88px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .fourth_book {
+                margin-left: 38px;
+
+                .first_book_cont {
+
+                    .fourth_book_number {
+                        font-size   : 85px;
+                        margin-top  : 8px;
+                        margin-right: -66px;
+                    }
+
+                    .first_book_text {
+
+                        .first_book_text_p1 {
+                            font-size  : 18px;
+                            width      : 157px;
+                            margin-left: 97px;
+                        }
+
+                        .first_book_text_p2 {
+                            margin-left: 36px;
+                        }
+
+                        .fourth_book_img {
+                            width     : 346px;
+                            margin-top: -88px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .fourth_block {
+
+            .fourth_block__title {
+                h1 {
+                    font-size : 32px;
+                    margin-top: 0px;
+                }
+            }
+        }
+
+        .five_block {
+            width : 400px;
+            height: 700px;
+
+            .five_block_title {
+                font-size  : 21px;
+                margin-left: 21px;
+                margin-top : 25px;
+            }
+
+            .five_block_info {
+                display       : flex;
+                flex-direction: column;
+                align-items   : center;
+                margin-top    : 33px;
+                margin-left   : 0;
+
+                .five_block_img {
+                    width: 110px;
+                }
+
+                .five_block_name {
+                    margin-left: 0px;
+                    margin-top : 18px;
+
+                    .autor_name {
+                        font-size: 26.6px;
+                    }
+
+                    .position {
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            form {
+                display       : flex;
+                flex-direction: column;
+
+                .input_form {
+                    margin-bottom: 59px;
+                    align-items  : center;
+
+                    .form_input {
+                        font-size: 15px;
+                    }
+
+                    .input_form__valid {
+                        margin-top: 81px;
+                    }
+                }
+
+                .form_btn {
+                    margin-left: 42px;
+
+                    .form_checkbox__valid {
+                        display: none;
+                    }
+                }
+
+                .form_1::after {
+                    margin-right: 180px;
+                    margin-left : 0;
+                }
+
+                .form_2::after {
+                    margin-right: 180px;
+                    margin-left : 0;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-device-width: 440px) {
+    .wrapper {
+
+        header {
+
+            .header_content {
+
+                .header_content_title {
+                    font-size    : 49px;
+                    margin-bottom: 0px;
+                }
+
+                .header_content_title2 {
+                    font-size    : 18px;
+                    margin-bottom: 0px;
+                }
+
+                .header_content_title__p {
+                    font-size: 7px;
+                }
+
+                .order_a_set {
+                    width             : 218px;
+                    height            : 48px;
+                    border-radius     : 22px;
+                    padding           : 15px 35px;
+                    text-decoration   : none;
+                    background        : linear-gradient(174deg, #e7b73e 0%, #aa6710 100%);
+                    box-shadow        : 0em 0.4em 5px rgba(122, 122, 122, 0.5);
+                    -webkit-transition: 0.3s;
+                    transition        : 0.3s;
+                    font-family       : Oranienbaum;
+                    font-size         : 10px;
+                    font-weight       : 400;
+                    color             : #000000;
+                    margin-top        : 15px;
+                    cursor            : pointer;
+                    border            : none;
+                    outline           : none;
+
+                    img {
+                        width: 20px;
+                    }
+                }
+            }
+
+            .header_content_small {
+
+                .icons {
+
+                    .icon_text {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .second_block {
+
+            .second_block__title {
+                margin-top: -128px;
+
+                h1 {
+                    font-size: 24px !important;
+                }
+            }
+        }
+
+        .third_block {
+
+
+            .third_block_title {
+                font-size: 24px;
+            }
+
+            .first_book {
+
+                .first_book_cont {
+
+                    .first_book_number {
+                        font-size : 85px;
+                        margin-top: 8px;
+                    }
+
+                    .first_book_text {
+
+                        .first_book_text_p1 {
+                            font-size  : 18px;
+                            width      : 157px;
+                            margin-left: 97px;
+                        }
+
+                        .first_book_text_p2 {
+                            margin-left: 36px;
+                        }
+
+                        .first_book_img {
+                            width     : 346px;
+                            margin-top: -88px;
+                        }
+                    }
+                }
+            }
+
+            .two_books {
+
+                .second_book {
+                    margin-left: 38px;
+
+                    .first_book_cont {
+
+                        .second_book_number {
+                            font-size   : 85px;
+                            margin-top  : 8px;
+                            margin-right: -66px;
+                        }
+
+                        .first_book_text {
+
+                            .first_book_text_p1 {
+                                font-size  : 18px;
+                                width      : 157px;
+                                margin-left: 97px;
+                            }
+
+                            .first_book_text_p2 {
+                                margin-left: 36px;
+                            }
+
+                            .second_book_img {
+                                width     : 346px;
+                                margin-top: -59px;
+                            }
+                        }
+                    }
+                }
+
+                .third_book {
+                    margin-left: 38px;
+
+                    .first_book_cont {
+
+                        .third_book_number {
+                            font-size   : 85px;
+                            margin-top  : 8px;
+                            margin-right: -66px;
+                        }
+
+                        .first_book_text {
+
+                            .first_book_text_p1 {
+                                font-size  : 18px;
+                                width      : 157px;
+                                margin-left: 97px;
+                            }
+
+                            .first_book_text_p2 {
+                                margin-left: 36px;
+                            }
+
+                            .third_book_img {
+                                width     : 346px;
+                                margin-top: -66px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .fourth_book {
+                margin-left: 38px;
+
+                .first_book_cont {
+
+                    .fourth_book_number {
+                        font-size   : 85px;
+                        margin-top  : 8px;
+                        margin-right: -66px;
+                    }
+
+                    .first_book_text {
+
+                        .first_book_text_p1 {
+                            font-size  : 18px;
+                            width      : 157px;
+                            margin-left: 97px;
+                        }
+
+                        .first_book_text_p2 {
+                            margin-left: 36px;
+                        }
+
+                        .fourth_book_img {
+                            width     : 346px;
+                            margin-top: -53px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .fourth_block {
+
+            .fourth_block__title {
+
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
+
+        .five_block {
+            width: 285px;
+
+            form {
+
+                .input_form {
+                    margin-left: -22px;
+                }
+
+                .form_btn {
+                    margin-left: -28px;
+                }
+            }
+        }
+    }
 }

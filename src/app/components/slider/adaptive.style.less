@@ -1,5 +1,45 @@
-@media screen and (max-device-width: 827px) {
+@media screen and (max-device-width: 985px) {
     .slider {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        height        : 651px;
+
+        .books_content__textblock_mobile {
+            display       : flex;
+            flex-direction: column;
+            align-items   : center;
+            position      : absolute;
+            text-align    : center;
+            top           : 158px;
+
+            .books_content__title1 {
+                font-family: Oranienbaum;
+                font-size  : 16px;
+                line-height: 30px;
+                font-weight: 400;
+                color      : #000000;
+                margin-top : 86px;
+            }
+
+            .books_content__title2 {
+                font-family: Oranienbaum;
+                font-weight: 400;
+                color      : #000000;
+                font-size  : 22px;
+            }
+
+            .books_content__text {
+                font-family   : Tinos-Italic;
+                font-size     : 9px;
+                line-height   : 18px;
+                font-weight   : 400;
+                font-style    : italic;
+                letter-spacing: 0.025em;
+                color         : #000000;
+                width         : 274px;
+            }
+        }
 
         .slider_content {
             background-image : url(../../../assets/mobile/подложка.png);
@@ -7,9 +47,153 @@
             width            : 322px;
             height           : 618px;
 
+            .left_arrow {
+                background-image: url(../../../assets/mobile/left_arrow.png);
+                margin-left     : 16px;
+                margin-top      : 260px;
+            }
+
             .slider_image {
                 width     : 222px;
                 height    : 156px;
+                margin-top: 185px;
+            }
+
+            .books_content {
+                display: none;
+            }
+
+            .right_arrow {
+                background-image: url(../../../assets/mobile/right_arrow.png);
+                margin-top      : 260px;
+            }
+        }
+
+        .count_block__withhr {
+            display : block;
+            position: absolute;
+            top     : 562px;
+
+            hr {
+                width: 240px;
+            }
+
+            .count_books {
+                display     : flex;
+                padding-left: 31px;
+
+                .book {
+                    width       : 17px;
+                    height      : 17px;
+                    margin-right: 13px;
+                }
+
+                .count_books__title {
+                    margin-right : 36px;
+                    font-family  : Tinos;
+                    font-size    : 14px;
+                    line-height  : 1.2;
+                    font-weight  : 400;
+                    color        : #000000;
+                    margin-bottom: 23px;
+                }
+            }
+        }
+
+        .choosing_text__mobile {
+            display : block;
+            position: absolute;
+            top     : 660px;
+
+            .cost {
+                display: flex;
+
+                .cost__p {
+                    font-family: Tinos;
+                    font-size  : 27.5px;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    color      : #000000;
+                }
+
+                .text__p {
+                    margin-top : 4px;
+                    font-family: Tinos;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    color      : #000000;
+                    font-size  : 23px;
+                    margin-left: 10px;
+                }
+
+            }
+
+            .cost_text {
+                font-family: Tinos;
+                font-size  : 11px;
+                line-height: 1.2;
+                font-weight: 400;
+                color      : #000000;
+            }
+        }
+
+        .choosing_kit_mobile {
+            display : block;
+            position: absolute;
+            top     : 725px;
+
+            .choosing_kit__btn {
+                background     : transparent;
+                border         : none;
+                cursor         : pointer;
+                font-family    : CormorantUnicase;
+                font-size      : 12px;
+                line-height    : 1.2;
+                font-weight    : 700;
+                text-decoration: underline;
+                color          : #000000;
+                display        : block;
+                margin         : 0 auto;
+                margin-top: 20px;
+            }
+
+
+            .choosing_btn {
+
+                .order_a_set {
+                    text-align : center;
+                    align-items: center;
+                }
+
+                .order_a_set a {
+                    display             : -webkit-inline-box;
+                    display             : inline-flex;
+                    -webkit-box-pack    : center;
+                    justify-content     : center;
+                    align-items         : center;
+                    width               : 211px;
+                    height              : 48px;
+                    border-radius       : 21px;
+                    background          : #e7b73e;
+                    background          : linear-gradient(174deg, #e7b73e 0%, #aa6710 100%);
+                    box-shadow          : 0em 0.4em 5px rgba(122, 122, 122, 0.5);
+                    -webkit-transition  : 0.3s;
+                    transition          : 0.3s;
+                    font-family         : Oranienbaum;
+                    font-size           : 13px;
+                    font-weight         : 400;
+                    color               : #000000;
+                    cursor              : pointer;
+                }
+
+                .order_a_set a img {
+                    margin-left: 11px;
+                    width: 20px;
+                }
+
+                .order_a_set a:hover {
+                    opacity: 0.7;
+                }
             }
         }
     }

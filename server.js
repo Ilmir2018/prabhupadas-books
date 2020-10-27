@@ -58,6 +58,6 @@ app.post("/", (req, res) => {
 
 });
 
-app.listen(3000, "127.0.0.1", () => {
+app.listen(3000, "", () => {
   console.log("The server started on 3000");
 });

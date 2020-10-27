@@ -65,7 +65,7 @@ export class MoreDetailedComponent implements OnInit {
   }
 
   submit(complect) {
-    this.httpService.getConsultation('http://localhost:3000/',
+    this.httpService.getConsultation('http://prabhupada-books.ru:3000',
       this.orderComplect.get('phones').value, this.orderComplect.get('name').value,
       `Номер комплекта: ${complect + 1}`);
     setTimeout(() => {
@@ -77,6 +77,12 @@ export class MoreDetailedComponent implements OnInit {
   dataClose(data) {
     if (data === true) {
       this.httpService.done = false;
+    }
+  }
+
+  dataChangeHandler(data) {
+    if (data === true) {
+      this.httpService.moreDetailed = false;
     }
   }
 

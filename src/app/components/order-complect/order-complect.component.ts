@@ -14,6 +14,7 @@ export class OrderComplectComponent implements OnInit {
   @Input() visibility: boolean;
   @Input() complect: number;
   slides = Complects;
+  visible: boolean = false;
   orderComplect: FormGroup;
   @Output() visibleChanged: EventEmitter<any> = new EventEmitter<any>()
   private done: boolean = false;
@@ -65,7 +66,7 @@ export class OrderComplectComponent implements OnInit {
   }
 
   submit(complect) {
-    this.httpService.getConsultation('http://localhost:3000/',
+    this.httpService.getConsultation('http://prabhupada-books.ru:3000',
       this.orderComplect.get('phones').value, this.orderComplect.get('name').value,
        `Номер комплекта: ${complect + 1}`);
        setTimeout(() => {
@@ -76,7 +77,13 @@ export class OrderComplectComponent implements OnInit {
 
   dataClose(data) {
     if (data === true) {
-      this.httpService.done = false;
+      this.httpService.moreDetailed = false;
+    }
+  }
+
+  dataChangeHandler(data) {
+    if (data === true) {
+      this.httpService.orderComplect = false;
     }
   }
 

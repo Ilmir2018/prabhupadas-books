@@ -1,283 +1,187 @@
 .complect {
-    width           : 860px;
-    height          : 691px;
-    top             : 30px;
-    background-color: white;
-    border          : 2px solid #ffd200;
-    box-shadow      : 0px 0px 32px 8px rgba(255, 164, 0, 0.21);
-    z-index         : 10;
-    display         : flex;
-    margin-left     : 365px;
+    height          : 100%;
     position        : fixed;
+    width           : 100%;
+    z-index         : 10;
+    background-color: #333333;
+    opacity         : 0.95;
+    left            : 0px;
+    top             : 0px;
+    display         : flex;
+    justify-content : center;
 
-
-    .left_block {
-        width           : 343px;
-        z-index         : 11;
+    .cont {
+        width           : 860px;
+        height          : 691px;
+        top             : 30px;
         background-color: white;
+        border          : 2px solid #ffd200;
+        box-shadow      : 0px 0px 32px 8px rgba(255, 164, 0, 0.21);
+        z-index         : 10;
+        display         : flex;
+        position        : fixed;
 
-        .left_block__image {
-            width        : 303px;
-            height       : 218px;
-            margin-top   : 25px;
-            margin-left  : 15px;
-            margin-bottom: 39px;
-        }
+        .left_block {
+            width           : 343px;
+            z-index         : 11;
+            background-color: white;
 
-        .texts {
-            margin-left: 49px;
+            .left_block__image {
+                width        : 303px;
+                height       : 218px;
+                margin-top   : 25px;
+                margin-left  : 15px;
+                margin-bottom: 39px;
+            }
 
-            .content {
-                font-family: CormorantUnicase;
-                font-size  : 17.7px;
-                line-height: 1.2;
-                font-weight: 300;
-                color      : #000000;
+            .texts {
+                margin-left: 49px;
 
-                .count {
+                .content {
                     font-family: CormorantUnicase;
                     font-size  : 17.7px;
                     line-height: 1.2;
+                    font-weight: 300;
                     color      : #000000;
-                    font-weight: 700;
+
+                    .count {
+                        font-family: CormorantUnicase;
+                        font-size  : 17.7px;
+                        line-height: 1.2;
+                        color      : #000000;
+                        font-weight: 700;
+                    }
                 }
             }
+
+
         }
 
+        .right_block {
+            width           : 517px;
+            background-color: #A96D1C;
+            z-index         : 10;
 
-    }
+            .white_title {
+                font-family   : Oranienbaum;
+                font-size     : 48px;
+                line-height   : 40px;
+                font-weight   : 400;
+                text-transform: uppercase;
+                letter-spacing: -0.005em;
+                color         : #ffffff;
+                letter-spacing: normal;
+                margin-top    : 66px;
+                margin-left   : 29px;
+            }
 
-    .right_block {
-        width           : 517px;
-        background-color: #A96D1C;
-        z-index         : 10;
+            .title {
+                font-family   : Oranienbaum;
+                font-size     : 48px;
+                line-height   : 40px;
+                font-weight   : 400;
+                text-transform: uppercase;
+                letter-spacing: -0.005em;
+                letter-spacing: normal;
+                color         : #000000;
+                margin-left   : 29px;
+            }
 
-        .white_title {
-            font-family   : Oranienbaum;
-            font-size     : 48px;
-            line-height   : 40px;
-            font-weight   : 400;
-            text-transform: uppercase;
-            letter-spacing: -0.005em;
-            color         : #ffffff;
-            letter-spacing: normal;
-            margin-top    : 66px;
-            margin-left   : 29px;
-        }
+            .right_block__text {
+                font-family   : Roboto;
+                font-size     : 10px;
+                line-height   : 18px;
+                font-weight   : 400;
+                font-style    : italic;
+                letter-spacing: 0.025em;
+                color         : #221a1a;
+                margin-top    : 23px;
+                margin-left   : 33px;
+                margin-bottom : 47px;
+            }
 
-        .title {
-            font-family   : Oranienbaum;
-            font-size     : 48px;
-            line-height   : 40px;
-            font-weight   : 400;
-            text-transform: uppercase;
-            letter-spacing: -0.005em;
-            letter-spacing: normal;
-            color         : #000000;
-            margin-left   : 29px;
-        }
+            .right_block__text2 {
+                font-family   : Roboto;
+                font-size     : 10px;
+                line-height   : 18px;
+                font-weight   : 400;
+                font-style    : italic;
+                letter-spacing: 0.025em;
+                color         : #221a1a;
+                margin-top    : 23px;
+                margin-left   : 33px;
+                margin-bottom : 102px;
+            }
 
-        .right_block__text {
-            font-family   : Roboto;
-            font-size     : 10px;
-            line-height   : 18px;
-            font-weight   : 400;
-            font-style    : italic;
-            letter-spacing: 0.025em;
-            color         : #221a1a;
-            margin-top    : 23px;
-            margin-left   : 33px;
-            margin-bottom : 47px;
-        }
-
-        .right_block__text2 {
-            font-family   : Roboto;
-            font-size     : 10px;
-            line-height   : 18px;
-            font-weight   : 400;
-            font-style    : italic;
-            letter-spacing: 0.025em;
-            color         : #221a1a;
-            margin-top    : 23px;
-            margin-left   : 33px;
-            margin-bottom : 102px;
-        }
-
-        .right_block__text3 {
-            font-family   : Roboto;
-            font-size     : 10px;
-            line-height   : 18px;
-            font-weight   : 400;
-            font-style    : italic;
-            letter-spacing: 0.025em;
-            color         : #221a1a;
-            margin-top    : 23px;
-            margin-left   : 33px;
-            margin-bottom : 10px;
-        }
-
-        .bhagavata {
-            font-family   : Roboto;
-            font-size     : 30px;
-            line-height   : 18px;
-            font-weight   : 500;
-            text-transform: uppercase;
-            color         : #ffa300;
-            text-align    : center;
-            margin-bottom : 3px;
-        }
-
-        .purana {
-            font-family   : Roboto;
-            line-height   : 18px;
-            text-transform: uppercase;
-            color         : #ffa300;
-            font-size     : 24px;
-            font-weight   : 100;
-            letter-spacing: 0.35em;
-            text-align    : center;
-        }
-
-        .complect_2 {
-            display: flex;
+            .right_block__text3 {
+                font-family   : Roboto;
+                font-size     : 10px;
+                line-height   : 18px;
+                font-weight   : 400;
+                font-style    : italic;
+                letter-spacing: 0.025em;
+                color         : #221a1a;
+                margin-top    : 23px;
+                margin-left   : 33px;
+                margin-bottom : 10px;
+            }
 
             .bhagavata {
                 font-family   : Roboto;
-                font-size     : 24px;
+                font-size     : 30px;
                 line-height   : 18px;
-                font-weight   : 100;
+                font-weight   : 500;
                 text-transform: uppercase;
-                letter-spacing: 0.1em;
                 color         : #ffa300;
+                text-align    : center;
                 margin-bottom : 3px;
-                margin-left   : 36px;
-                padding-right : 10px;
             }
 
             .purana {
                 font-family   : Roboto;
-                font-size     : 24px;
                 line-height   : 18px;
-                font-weight   : 900;
                 text-transform: uppercase;
-                letter-spacing: 0.1em;
                 color         : #ffa300;
+                font-size     : 24px;
+                font-weight   : 100;
+                letter-spacing: 0.35em;
+                text-align    : center;
             }
-        }
 
-        .right_block__content {
-            display   : flex;
-            margin-top: 18px;
+            .complect_2 {
+                display: flex;
 
-            .right_content {
-                width : 217px;
-                height: 170px;
+                .bhagavata {
+                    font-family   : Roboto;
+                    font-size     : 24px;
+                    line-height   : 18px;
+                    font-weight   : 100;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    color         : #ffa300;
+                    margin-bottom : 3px;
+                    margin-left   : 36px;
+                    padding-right : 10px;
+                }
 
-                .right_content_text {
-                    font-family  : Roboto;
-                    font-size    : 9px;
-                    line-height  : 16px;
-                    font-weight  : 400;
-                    color        : #221a1a;
-                    margin-left  : 20px;
-                    margin-bottom: 20px;
+                .purana {
+                    font-family   : Roboto;
+                    font-size     : 24px;
+                    line-height   : 18px;
+                    font-weight   : 900;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    color         : #ffa300;
                 }
             }
 
-            .right_content::after {
-                content          : "";
-                display          : block;
-                position         : absolute;
-                top              : 367px;
-                left             : 600px;
-                background-image : url(../../../assets/complects/02.png);
-                background-repeat: no-repeat;
-                width            : 17%;
-                height           : 17%;
-                opacity          : 0.2;
-                z-index          : 1;
-            }
+            .right_block__content {
+                display   : flex;
+                margin-top: 18px;
 
-            .left_content {
-                width : 217px;
-                height: 170px;
-
-                .left_content_text {
-                    font-family  : Roboto;
-                    font-size    : 9px;
-                    line-height  : 16px;
-                    font-weight  : 400;
-                    color        : #fefefe;
-                    margin-bottom: 12px;
-                    margin-left  : 40px;
-                }
-            }
-
-            .left_content::after {
-                content          : "";
-                display          : block;
-                position         : absolute;
-                top              : 367px;
-                left             : 404px;
-                background-image : url(../../../assets/complects/01.png);
-                background-repeat: no-repeat;
-                width            : 17%;
-                height           : 17%;
-                opacity          : 0.2;
-                z-index          : 1;
-            }
-        }
-
-        .right_block__content_3 {
-            display   : flex;
-            margin-top: 18px;
-
-            .right_content {
-                width : 217px;
-                height: 170px;
-
-                .right_content__top {
-                    width : 260px;
+                .right_content {
+                    width : 217px;
                     height: 170px;
-
-                    .right_top_title {
-                        text-align: center;
-
-                        .right_content_title_1 {
-                            font-family   : Roboto;
-                            font-size     : 24px;
-                            line-height   : 18px;
-                            font-weight   : 100;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1em;
-                            color         : #ffa300;
-                        }
-
-                        .right_content_title_2 {
-                            font-family   : Roboto;
-                            font-size     : 24px;
-                            line-height   : 18px;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1em;
-                            color         : #ffa300;
-                            font-weight   : 900;
-                            margin-bottom : 10px;
-                        }
-                    }
-
-                    .right_top_title::after {
-                        content          : "";
-                        display          : block;
-                        position         : absolute;
-                        top              : 272px;
-                        left             : 635px;
-                        background-image : url(../../../assets/complects/02.png);
-                        background-repeat: no-repeat;
-                        width            : 17%;
-                        height           : 17%;
-                        opacity          : 0.2;
-                        z-index          : 1;
-                    }
 
                     .right_content_text {
                         font-family  : Roboto;
@@ -285,163 +189,18 @@
                         line-height  : 16px;
                         font-weight  : 400;
                         color        : #221a1a;
-                        margin-left  : 60px;
+                        margin-left  : 20px;
                         margin-bottom: 20px;
                     }
                 }
 
-                .right_content__bottom {
-                    width     : 260px;
-                    height    : 170px;
-                    margin-top: 50px;
-
-                    .right_bottom_title {
-                        text-align: center;
-                        width     : 300px;
-
-                        .right_content_title_1 {
-                            font-family   : Roboto;
-                            font-size     : 24px;
-                            line-height   : 18px;
-                            font-weight   : 100;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1em;
-                            color         : #ffa300;
-                        }
-
-                        .right_content_title_2 {
-                            font-family   : Roboto;
-                            font-size     : 24px;
-                            line-height   : 18px;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1em;
-                            color         : #ffa300;
-                            font-weight   : 900;
-                            margin-bottom : 10px;
-                        }
-                    }
-
-                    .right_bottom_title::after {
-                        content          : "";
-                        display          : block;
-                        position         : absolute;
-                        top              : 504px;
-                        left             : 644px;
-                        background-image : url(../../../assets/complects/04.png);
-                        background-repeat: no-repeat;
-                        width            : 17%;
-                        height           : 17%;
-                        opacity          : 0.2;
-                        z-index          : 1;
-                    }
-
-                    .right_content_text {
-                        font-family  : Roboto;
-                        font-size    : 9px;
-                        line-height  : 16px;
-                        font-weight  : 400;
-                        color        : #221a1a;
-                        margin-left  : 60px;
-                        margin-bottom: 20px;
-                    }
-                }
-            }
-
-            .left_content {
-                width : 217px;
-                height: 170px;
-
-                .left_content__top {
-                    width : 229px;
-                    height: 170px;
-
-                    .left_top_title {
-                        text-align: center;
-
-                        .left_content_title_1 {
-                            font-family   : Roboto;
-                            font-size     : 24px;
-                            line-height   : 18px;
-                            font-weight   : 100;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1em;
-                            color         : #ffa300;
-                        }
-
-                        .left_content_title_2 {
-                            font-family   : Roboto;
-                            font-size     : 24px;
-                            line-height   : 18px;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1em;
-                            color         : #ffa300;
-                            font-weight   : 900;
-                            margin-bottom : 10px;
-                        }
-                    }
-
-
-                    .left_content_text {
-                        font-family  : Roboto;
-                        font-size    : 9px;
-                        line-height  : 16px;
-                        font-weight  : 400;
-                        color        : #fefefe;
-                        margin-bottom: 12px;
-                        margin-left  : 40px;
-                    }
-                }
-
-                .left_content__bottom {
-                    width     : 229px;
-                    height    : 170px;
-                    margin-top: 50px;
-
-                    .left_bottom_title {
-                        text-align: center;
-
-                        .left_content_title_1 {
-                            font-family   : Roboto;
-                            font-size     : 24px;
-                            line-height   : 18px;
-                            font-weight   : 100;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1em;
-                            color         : #ffa300;
-                        }
-
-                        .left_content_title_2 {
-                            font-family   : Roboto;
-                            font-size     : 24px;
-                            line-height   : 18px;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1em;
-                            color         : #ffa300;
-                            font-weight   : 900;
-                            margin-bottom : 10px;
-                            width         : 267px;
-                        }
-                    }
-
-
-                    .left_content_text {
-                        font-family  : Roboto;
-                        font-size    : 9px;
-                        line-height  : 16px;
-                        font-weight  : 400;
-                        color        : #fefefe;
-                        margin-bottom: 12px;
-                        margin-left  : 40px;
-                    }
-                }
-
-                .left_bottom_title:after {
+                .right_content::after {
                     content          : "";
                     display          : block;
                     position         : absolute;
-                    top              : 500px;
-                    left             : 404px;
-                    background-image : url(../../../assets/complects/03.png);
+                    top              : 367px;
+                    left             : 600px;
+                    background-image : url(../../../assets/complects/02.png);
                     background-repeat: no-repeat;
                     width            : 17%;
                     height           : 17%;
@@ -449,11 +208,26 @@
                     z-index          : 1;
                 }
 
-                .left_top_title:after {
+                .left_content {
+                    width : 217px;
+                    height: 170px;
+
+                    .left_content_text {
+                        font-family  : Roboto;
+                        font-size    : 9px;
+                        line-height  : 16px;
+                        font-weight  : 400;
+                        color        : #fefefe;
+                        margin-bottom: 12px;
+                        margin-left  : 40px;
+                    }
+                }
+
+                .left_content::after {
                     content          : "";
                     display          : block;
                     position         : absolute;
-                    top              : 274px;
+                    top              : 367px;
                     left             : 404px;
                     background-image : url(../../../assets/complects/01.png);
                     background-repeat: no-repeat;
@@ -463,291 +237,529 @@
                     z-index          : 1;
                 }
             }
-        }
 
-        .right_block__content_4 {
+            .right_block__content_3 {
+                display   : flex;
+                margin-top: 18px;
 
-            .right_block_title {
-                text-align: center;
+                .right_content {
+                    width : 217px;
+                    height: 170px;
 
-                .right_block_title1 {
-                    font-family   : Roboto;
-                    font-size     : 48px;
-                    line-height   : 36px;
-                    font-weight   : 100;
-                    text-transform: uppercase;
-                    letter-spacing: -0.1em;
-                    color         : #ffa300;
+                    .right_content__top {
+                        width : 260px;
+                        height: 170px;
+
+                        .right_top_title {
+                            text-align: center;
+
+                            .right_content_title_1 {
+                                font-family   : Roboto;
+                                font-size     : 24px;
+                                line-height   : 18px;
+                                font-weight   : 100;
+                                text-transform: uppercase;
+                                letter-spacing: 0.1em;
+                                color         : #ffa300;
+                            }
+
+                            .right_content_title_2 {
+                                font-family   : Roboto;
+                                font-size     : 24px;
+                                line-height   : 18px;
+                                text-transform: uppercase;
+                                letter-spacing: 0.1em;
+                                color         : #ffa300;
+                                font-weight   : 900;
+                                margin-bottom : 10px;
+                            }
+                        }
+
+                        .right_top_title::after {
+                            content          : "";
+                            display          : block;
+                            position         : absolute;
+                            top              : 272px;
+                            left             : 635px;
+                            background-image : url(../../../assets/complects/02.png);
+                            background-repeat: no-repeat;
+                            width            : 17%;
+                            height           : 17%;
+                            opacity          : 0.2;
+                            z-index          : 1;
+                        }
+
+                        .right_content_text {
+                            font-family  : Roboto;
+                            font-size    : 9px;
+                            line-height  : 16px;
+                            font-weight  : 400;
+                            color        : #221a1a;
+                            margin-left  : 60px;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .right_content__bottom {
+                        width     : 260px;
+                        height    : 170px;
+                        margin-top: 50px;
+
+                        .right_bottom_title {
+                            text-align: center;
+                            width     : 300px;
+
+                            .right_content_title_1 {
+                                font-family   : Roboto;
+                                font-size     : 24px;
+                                line-height   : 18px;
+                                font-weight   : 100;
+                                text-transform: uppercase;
+                                letter-spacing: 0.1em;
+                                color         : #ffa300;
+                            }
+
+                            .right_content_title_2 {
+                                font-family   : Roboto;
+                                font-size     : 24px;
+                                line-height   : 18px;
+                                text-transform: uppercase;
+                                letter-spacing: 0.1em;
+                                color         : #ffa300;
+                                font-weight   : 900;
+                                margin-bottom : 10px;
+                            }
+                        }
+
+                        .right_bottom_title::after {
+                            content          : "";
+                            display          : block;
+                            position         : absolute;
+                            top              : 504px;
+                            left             : 644px;
+                            background-image : url(../../../assets/complects/04.png);
+                            background-repeat: no-repeat;
+                            width            : 17%;
+                            height           : 17%;
+                            opacity          : 0.2;
+                            z-index          : 1;
+                        }
+
+                        .right_content_text {
+                            font-family  : Roboto;
+                            font-size    : 9px;
+                            line-height  : 16px;
+                            font-weight  : 400;
+                            color        : #221a1a;
+                            margin-left  : 60px;
+                            margin-bottom: 20px;
+                        }
+                    }
                 }
 
-                .right_block_title2 {
-                    font-family   : Roboto;
-                    font-size     : 48px;
-                    line-height   : 36px;
-                    text-transform: uppercase;
-                    letter-spacing: -0.1em;
-                    color         : #ffa300;
-                    font-weight   : 900;
+                .left_content {
+                    width : 217px;
+                    height: 170px;
+
+                    .left_content__top {
+                        width : 229px;
+                        height: 170px;
+
+                        .left_top_title {
+                            text-align: center;
+
+                            .left_content_title_1 {
+                                font-family   : Roboto;
+                                font-size     : 24px;
+                                line-height   : 18px;
+                                font-weight   : 100;
+                                text-transform: uppercase;
+                                letter-spacing: 0.1em;
+                                color         : #ffa300;
+                            }
+
+                            .left_content_title_2 {
+                                font-family   : Roboto;
+                                font-size     : 24px;
+                                line-height   : 18px;
+                                text-transform: uppercase;
+                                letter-spacing: 0.1em;
+                                color         : #ffa300;
+                                font-weight   : 900;
+                                margin-bottom : 10px;
+                            }
+                        }
+
+
+                        .left_content_text {
+                            font-family  : Roboto;
+                            font-size    : 9px;
+                            line-height  : 16px;
+                            font-weight  : 400;
+                            color        : #fefefe;
+                            margin-bottom: 12px;
+                            margin-left  : 40px;
+                        }
+                    }
+
+                    .left_content__bottom {
+                        width     : 229px;
+                        height    : 170px;
+                        margin-top: 50px;
+
+                        .left_bottom_title {
+                            text-align: center;
+
+                            .left_content_title_1 {
+                                font-family   : Roboto;
+                                font-size     : 24px;
+                                line-height   : 18px;
+                                font-weight   : 100;
+                                text-transform: uppercase;
+                                letter-spacing: 0.1em;
+                                color         : #ffa300;
+                            }
+
+                            .left_content_title_2 {
+                                font-family   : Roboto;
+                                font-size     : 24px;
+                                line-height   : 18px;
+                                text-transform: uppercase;
+                                letter-spacing: 0.1em;
+                                color         : #ffa300;
+                                font-weight   : 900;
+                                margin-bottom : 10px;
+                                width         : 267px;
+                            }
+                        }
+
+
+                        .left_content_text {
+                            font-family  : Roboto;
+                            font-size    : 9px;
+                            line-height  : 16px;
+                            font-weight  : 400;
+                            color        : #fefefe;
+                            margin-bottom: 12px;
+                            margin-left  : 40px;
+                        }
+                    }
+
+                    .left_bottom_title:after {
+                        content          : "";
+                        display          : block;
+                        position         : absolute;
+                        top              : 500px;
+                        left             : 404px;
+                        background-image : url(../../../assets/complects/03.png);
+                        background-repeat: no-repeat;
+                        width            : 17%;
+                        height           : 17%;
+                        opacity          : 0.2;
+                        z-index          : 1;
+                    }
+
+                    .left_top_title:after {
+                        content          : "";
+                        display          : block;
+                        position         : absolute;
+                        top              : 274px;
+                        left             : 404px;
+                        background-image : url(../../../assets/complects/01.png);
+                        background-repeat: no-repeat;
+                        width            : 17%;
+                        height           : 17%;
+                        opacity          : 0.2;
+                        z-index          : 1;
+                    }
                 }
             }
 
-            ol {
-                margin-left: 21px;
+            .right_block__content_4 {
 
-                li {
-                    font-family   : Roboto;
-                    font-size     : 24px;
-                    line-height   : 36px;
-                    font-weight   : 100;
-                    letter-spacing: 0.025em;
-                    color         : #221a1a;
+                .right_block_title {
+                    text-align: center;
+
+                    .right_block_title1 {
+                        font-family   : Roboto;
+                        font-size     : 48px;
+                        line-height   : 36px;
+                        font-weight   : 100;
+                        text-transform: uppercase;
+                        letter-spacing: -0.1em;
+                        color         : #ffa300;
+                    }
+
+                    .right_block_title2 {
+                        font-family   : Roboto;
+                        font-size     : 48px;
+                        line-height   : 36px;
+                        text-transform: uppercase;
+                        letter-spacing: -0.1em;
+                        color         : #ffa300;
+                        font-weight   : 900;
+                    }
+                }
+
+                ol {
+                    margin-left: 21px;
+
+                    li {
+                        font-family   : Roboto;
+                        font-size     : 24px;
+                        line-height   : 36px;
+                        font-weight   : 100;
+                        letter-spacing: 0.025em;
+                        color         : #221a1a;
+                    }
                 }
             }
-        }
 
-        .contains {
-            font-family   : Roboto;
-            font-size     : 24px;
-            line-height   : 18px;
-            font-weight   : 900;
-            text-transform: uppercase;
-            color         : #ffa300;
-            text-align    : center;
-            margin-top    : 41px;
-        }
-
-
-        .contains_text {
-            margin-top : 24px;
-            margin-left: 38px;
-
-            .description {
-                font-family  : Roboto;
-                font-size    : 10px;
-                line-height  : 14px;
-                font-weight  : 500;
-                color        : #221a1a;
-                display      : flex;
-                margin-bottom: 10px;
+            .contains {
+                font-family   : Roboto;
+                font-size     : 24px;
+                line-height   : 18px;
+                font-weight   : 900;
+                text-transform: uppercase;
+                color         : #ffa300;
+                text-align    : center;
+                margin-top    : 41px;
             }
 
-            .description::before {
-                content          : "";
-                display          : block;
-                background-image : url(../../../assets/complects/tick_2365.png);
-                background-repeat: no-repeat;
-                width            : 20px;
-                height           : 20px;
-                z-index          : 1;
+
+            .contains_text {
+                margin-top : 24px;
+                margin-left: 38px;
+
+                .description {
+                    font-family  : Roboto;
+                    font-size    : 10px;
+                    line-height  : 14px;
+                    font-weight  : 500;
+                    color        : #221a1a;
+                    display      : flex;
+                    margin-bottom: 10px;
+                }
+
+                .description::before {
+                    content          : "";
+                    display          : block;
+                    background-image : url(../../../assets/complects/tick_2365.png);
+                    background-repeat: no-repeat;
+                    width            : 20px;
+                    height           : 20px;
+                    z-index          : 1;
+                }
             }
+
         }
 
+
+
+        .close {
+            content          : "";
+            display          : block;
+            background-image : url(../../../assets/complects/close_2157.png);
+            background-repeat: no-repeat;
+            width            : 27px;
+            height           : 27px;
+            position         : absolute;
+            left             : 862px;
+            top              : -20px;
+            cursor           : pointer;
+            border           : transparent;
+            background-color : transparent;
+            outline          : none;
+            z-index          : 10;
+        }
     }
-
-
-
-    .close {
-        content          : "";
-        display          : block;
-        background-image : url(../../../assets/complects/close_2157.png);
-        background-repeat: no-repeat;
-        width            : 27px;
-        height           : 27px;
-        position         : absolute;
-        left             : 862px;
-        top              : -20px;
-        cursor           : pointer;
-        border           : transparent;
-        background-color : transparent;
-        outline          : none;
-        z-index          : 10;
-    }
-}
-
-.hidden_block {
-    height          : 5500px;
-    position        : absolute;
-    width           : 1520px;
-    z-index         : -1;
-    background-color: #333333;
-    opacity         : 0.4;
-    left            : -364px;
-    top             : -125px;
 }
 
 
 
 .complect2 {
-    width         : 860px;
-    height        : 691px;
-    top           : 30px;
-    z-index       : 10;
-    display       : flex;
-    flex-direction: column;
-    margin-left   : 365px;
-    position      : fixed;
+    height          : 100%;
+    position        : fixed;
+    width           : 100%;
+    z-index         : 10;
+    background-color: #333333;
+    opacity         : 0.95;
+    left            : 0px;
+    top             : 0px;
+    display         : flex;
+    justify-content : center;
 
-    .top {
-        height          : 224px;
-        width           : 100%;
-        background-color: white;
+    .cont {
+        width         : 860px;
+        height        : 691px;
+        top           : 30px;
+        z-index       : 10;
+        display       : flex;
+        flex-direction: column;
+        position      : fixed;
 
-        .top_block__image {
-            margin-top : 21px;
-            margin-left: 67px;
-        }
-    }
-
-    .bottom {
-        z-index: 10;
-        display: flex;
-        height : 467px;
-
-        .left {
-            width           : 312px;
+        .top {
+            height          : 224px;
+            width           : 100%;
             background-color: white;
 
-            .texts {
-                margin-left: 26px;
-                margin-top : 51px;
+            .top_block__image {
+                margin-top : 21px;
+                margin-left: 67px;
+            }
+        }
 
-                .content {
-                    font-family: CormorantUnicase;
-                    font-size  : 24px;
-                    line-height: 1.2;
-                    font-weight: 300;
-                    color      : #000000;
+        .bottom {
+            z-index: 10;
+            display: flex;
+            height : 467px;
+
+            .left {
+                width           : 312px;
+                background-color: white;
+
+                .texts {
+                    margin-left: 26px;
+                    margin-top : 51px;
+
+                    .content {
+                        font-family: CormorantUnicase;
+                        font-size  : 24px;
+                        line-height: 1.2;
+                        font-weight: 300;
+                        color      : #000000;
+                    }
+
+                    .count {
+                        font-family: CormorantUnicase;
+                        font-size  : 24px;
+                        line-height: 1.2;
+                        color      : #000000;
+                        font-weight: 700;
+                    }
+
+                    .count_after {
+                        font-family: CormorantUnicase;
+                        font-size  : 24px;
+                        line-height: 1.2;
+                        color      : #000000;
+                        font-weight: 700;
+                    }
+
+                    .count_after::after {
+                        content          : "";
+                        display          : block;
+                        background-image : url(../../../assets/complects/pryamougolnik_12_3478.png);
+                        background-repeat: no-repeat;
+                        width            : 56px;
+                        height           : 20px;
+                        z-index          : 1;
+                        position         : absolute;
+                        margin-left      : 74px;
+                        margin-top       : -16px;
+                    }
+
+                    .count2 {
+                        font-family: CormorantUnicase;
+                        font-size  : 29.9px;
+                        line-height: 1.2;
+                        font-weight: 700;
+                        color      : #000000;
+                        margin-left: 20px;
+                    }
+
+                    .green_btn {
+                        background-color: #00B034;
+                        width           : 101px;
+                        height          : 18px;
+                        font-family     : FuturaPT;
+                        font-size       : 12px;
+                        line-height     : 1.2;
+                        font-weight     : 400;
+                        color           : #000000;
+                        text-align      : center;
+                        margin-left     : 172px;
+                    }
+                }
+            }
+
+            .right {
+                width           : 548px;
+                background-color: #A96D1C;
+
+                .first_text {
+                    font-family   : Oranienbaum;
+                    font-size     : 43px;
+                    line-height   : 40px;
+                    font-weight   : 400;
+                    text-transform: uppercase;
+                    letter-spacing: -0.005em;
+                    color         : #ffffff;
+                    margin-top    : 36px;
+                    margin-left   : 35px;
                 }
 
-                .count {
-                    font-family: CormorantUnicase;
-                    font-size  : 24px;
-                    line-height: 1.2;
-                    color      : #000000;
-                    font-weight: 700;
+                .second_text {
+                    font-family   : Oranienbaum;
+                    font-size     : 43px;
+                    line-height   : 40px;
+                    font-weight   : 400;
+                    text-transform: uppercase;
+                    letter-spacing: normal;
+                    color         : #000000;
+                    margin-left   : 35px;
                 }
 
-                .count_after {
-                    font-family: CormorantUnicase;
-                    font-size  : 24px;
-                    line-height: 1.2;
-                    color      : #000000;
-                    font-weight: 700;
+                .third_text {
+                    font-family   : Roboto;
+                    font-size     : 90px;
+                    line-height   : 1.2;
+                    font-weight   : 900;
+                    letter-spacing: 0.1em;
+                    color         : #221a1a;
+                    margin-top    : 70px;
+                    margin-left   : 49px;
                 }
 
-                .count_after::after {
-                    content          : "";
-                    display          : block;
-                    background-image : url(../../../assets/complects/pryamougolnik_12_3478.png);
-                    background-repeat: no-repeat;
-                    width            : 56px;
-                    height           : 20px;
-                    z-index          : 1;
-                    position         : absolute;
-                    margin-left      : 74px;
-                    margin-top       : -16px;
-                }
-
-                .count2 {
-                    font-family: CormorantUnicase;
-                    font-size  : 29.9px;
-                    line-height: 1.2;
-                    font-weight: 700;
-                    color      : #000000;
-                    margin-left: 20px;
-                }
-
-                .green_btn {
-                    background-color: #00B034;
-                    width           : 101px;
-                    height          : 18px;
-                    font-family     : FuturaPT;
-                    font-size       : 12px;
-                    line-height     : 1.2;
-                    font-weight     : 400;
-                    color           : #000000;
-                    text-align      : center;
-                    margin-left     : 172px;
+                .fourth_text {
+                    font-family   : Roboto;
+                    font-size     : 60px;
+                    line-height   : 48px;
+                    font-weight   : 100;
+                    letter-spacing: -0.05em;
+                    color         : #221a1a;
+                    text-align    : center;
                 }
             }
         }
 
-        .right {
-            width           : 548px;
-            background-color: #A96D1C;
-
-            .first_text {
-                font-family   : Oranienbaum;
-                font-size     : 43px;
-                line-height   : 40px;
-                font-weight   : 400;
-                text-transform: uppercase;
-                letter-spacing: -0.005em;
-                color         : #ffffff;
-                margin-top    : 36px;
-                margin-left   : 35px;
-            }
-
-            .second_text {
-                font-family   : Oranienbaum;
-                font-size     : 43px;
-                line-height   : 40px;
-                font-weight   : 400;
-                text-transform: uppercase;
-                letter-spacing: normal;
-                color         : #000000;
-                margin-left   : 35px;
-            }
-
-            .third_text {
-                font-family   : Roboto;
-                font-size     : 90px;
-                line-height   : 1.2;
-                font-weight   : 900;
-                letter-spacing: 0.1em;
-                color         : #221a1a;
-                margin-top    : 70px;
-                margin-left   : 49px;
-            }
-
-            .fourth_text {
-                font-family   : Roboto;
-                font-size     : 60px;
-                line-height   : 48px;
-                font-weight   : 100;
-                letter-spacing: -0.05em;
-                color         : #221a1a;
-                text-align    : center;
-            }
+        .close {
+            content          : "";
+            display          : block;
+            background-image : url(../../../assets/complects/close_2157.png);
+            background-repeat: no-repeat;
+            width            : 27px;
+            height           : 27px;
+            position         : absolute;
+            left             : 862px;
+            top              : -20px;
+            cursor           : pointer;
+            border           : transparent;
+            background-color : transparent;
+            outline          : none;
+            z-index          : 10;
         }
-    }
 
-    .close {
-        content          : "";
-        display          : block;
-        background-image : url(../../../assets/complects/close_2157.png);
-        background-repeat: no-repeat;
-        width            : 27px;
-        height           : 27px;
-        position         : absolute;
-        left             : 862px;
-        top              : -20px;
-        cursor           : pointer;
-        border           : transparent;
-        background-color : transparent;
-        outline          : none;
-        z-index          : 10;
-    }
-
-    .hidden_block {
-        height          : 5500px;
-        position        : absolute;
-        width           : 1520px;
-        z-index         : -1;
-        background-color: #333333;
-        opacity         : 0.4;
-        left            : -364px;
-        top             : -125px;
+        .hidden_block {
+            height          : 5500px;
+            position        : absolute;
+            width           : 1520px;
+            z-index         : -1;
+            background-color: #333333;
+            opacity         : 0.4;
+            left            : -364px;
+            top             : -125px;
+        }
     }
 }
 
@@ -811,7 +823,7 @@ form {
         height          : 12px;
         margin-top      : 37px;
         margin-left     : 60px;
-        position: absolute;
+        position        : absolute;
     }
 
     .form_1::after {
@@ -821,7 +833,7 @@ form {
         height          : 12px;
         margin-top      : 41px;
         margin-left     : 60px;
-        position: absolute;
+        position        : absolute;
     }
 
     .form_btn {
@@ -858,9 +870,9 @@ form {
             color          : #000000;
             margin-left    : 51px;
             margin-top     : 12px;
-            cursor: pointer;
-            border: none;
-            outline: none;
+            cursor         : pointer;
+            border         : none;
+            outline        : none;
         }
 
         .order_a_set img {
@@ -896,3 +908,9 @@ form {
         }
     }
 }
+
+.mobile {
+    display: none;
+}
+
+@import './adaptive.styles.less';

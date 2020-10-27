@@ -60,7 +60,7 @@ export class ConsultationComponent implements OnInit {
   }
 
   submit() {
-    this.httpService.getConsultation('http://localhost:3000/',
+    this.httpService.getConsultation('http://prabhupada-books.ru:3000',
       this.getConsulting.get('phones').value, this.getConsulting.get('name').value,
       `Консультация`);
     setTimeout(() => {

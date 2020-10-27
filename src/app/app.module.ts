@@ -13,6 +13,8 @@ import { HttpClientModule }   from '@angular/common/http';
 import { GratitudeComponent } from './components/gratitude/gratitude.component';
 import { NameMaskDirective } from './name-mask.directive';
 import { ConsultationComponent } from './components/consultation/consultation.component';
+import { OrderComplectMobileComponent } from './components/order-complect-mobile/order-complect-mobile.component';
+import { MoreDetailedMobileComponent } from './components/more-detailed-mobile/more-detailed-mobile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ConsultationComponent } from './components/consultation/consultation.co
     MoreDetailedComponent,
     OrderComplectComponent,
     GratitudeComponent,
-    ConsultationComponent
+    ConsultationComponent,
+    OrderComplectMobileComponent,
+    MoreDetailedMobileComponent
   ],
   imports: [
     BrowserModule,

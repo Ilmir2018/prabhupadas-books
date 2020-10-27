@@ -1,0 +1,93 @@
+<div class="mobile">
+    <div class="cont">
+        <p class="white_title">Комплект</p>
+        <p class="title">{{slides[complect].title_2}}</p>
+        <p class="right_block__text">{{slides[complect].outline}}</p>
+        <img *ngIf="complect != 6" class="left_block__image" [src]=slides[complect].image alt="">
+        <img *ngIf="complect == 6" class="left_block__image" [src]=slides[complect].mob_image alt="">
+        <div class="mob__content">
+            <button class="left_btn" (click)="changeSlide(false)"></button>
+            <div *ngIf="complect != 5 && complect != 6 && currentSlide != 0" class="left_content">
+                <p class="left_content_text">
+                    {{mobSlides[complect].complect[currentSlide].paragraph_1}}
+                </p>
+                <p class="left_content_text">
+                    {{mobSlides[complect].complect[currentSlide].paragraph_2}}
+                </p>
+                <p class="left_content_text">
+                    {{mobSlides[complect].complect[currentSlide].paragraph_3}}
+                </p>
+                <img class="mob_content__image" [src]=mobSlides[complect].complect[currentSlide].image alt="">
+            </div>
+            <div *ngIf="currentSlide == 0" class="texts">
+                <p class="content move">Кол-во томов: <span class="count">{{slides[complect].count_books}}</span></p>
+                <p *ngIf="complect == 0" class="content">Кол-во песен: <span
+                    class="count">{{slides[complect].count_songs}}</span>
+                </p>
+                <p *ngIf="complect == 1" class="content">Кол-во лил: <span class="count">{{slides[complect].count_songs}}</span>
+                </p>
+                <p *ngIf="complect == 2 || complect == 3 || complect == 4 || complect == 5" class="content">Кол-во произведений:
+                  <span class="count">{{slides[complect].count_songs}}</span></p>
+                <p *ngIf="complect == 0 || complect == 1" class="content">Кол-во стихов: <span
+                    class="count">{{slides[complect].count_verses}}</span></p>
+                <p *ngIf="complect == 1 && complect != 2" class="content">Кол-во глав: <span
+                    class="count">{{slides[complect].count_pages}}</span></p>
+                <p *ngIf="complect == 0 && complect != 2 && complect != 3" class="content">Кол-во страниц: <span
+                    class="count">{{slides[complect].count_pages}}</span></p>
+                <p class="content">Вес: <span class="count">{{slides[complect].weight}}</span></p>
+                <p *ngIf="complect == 0" class="content">Габариты: <span class="count">{{slides[complect].size}}</span></p>
+                <br>
+                <p class="content">Цена: <span class="count">{{slides[complect].price}}</span></p>
+              </div>
+            <div *ngIf="complect == 5 && currentSlide != 0" class="left_content2">
+                <div class="right_block_title">
+                  <p class="right_block_title1">Комплект состоит</p>
+                  <p class="right_block_title2">из 7 книг</p>
+                </div>
+                <ol>
+                  <li>Путь к совершенству</li>
+                  <li>Бесценный дар</li>
+                  <li>Царь знания</li>
+                  <li>Лёгкое путешествие на другие планеты</li>
+                  <li>В поисках просветления</li>
+                  <li>Грихастха ашрам</li>
+                  <li>Нектар наставлений.</li>
+                </ol>
+              </div>
+              <div *ngIf="complect == 6 && currentSlide != 0" class="left_content3">
+                <p class="first_text">комплект</p>
+                <p class="second_text">все книги ш.прабхупады</p>
+                <p class="third_text">97 томов</p>
+                <p class="fourth_text">трансцендентного знания</p>
+              </div>
+            <button class="right_btn" (click)="changeSlide(true)"></button>
+        </div>
+        <div class="slider_3">
+            <div *ngFor="let item of mobSlides[complect].complect">
+                <div *ngIf="item == mobSlides[complect].complect[currentSlide]" class="mob-slide active" (onclick)="currentSlideF(item)"></div>
+                <div *ngIf="item !== mobSlides[complect].complect[currentSlide]" class="mob-slide" (onclick)="currentSlideF(item)"></div>
+            </div>
+        </div>
+        <form action="/" method="post" [formGroup]="orderComplect">
+            <div class="input_form form_1">
+                <label for="name">Введите ваше имя</label>
+                <input type="text" name="name" id="name" class="form_input" placeholder="________________"
+                    formControlName="name" appNameMask>
+            </div>
+            <div class="input_form form_2">
+                <label for="phone">Введите Ваш номер телефона</label>
+                <input type="text" name="phone" id="phone" class="form_input" placeholder="+7-(___)-___-__-__"
+                    formControlName="phones" appPhoneMask>
+            </div>
+            <div class="form_btn">
+                <input class="order_a_set" (click)="submit(complect)" type="submit" name="submit" href="#books"
+                    value="заказать комплект" [disabled]="orderComplect.invalid">
+                <div class="form_checkbox">
+                    <input type="checkbox" formControlName="checkbox" required>
+                    <button class="btn_checkbox">Я соглашаюсь на обработку данных</button>
+                </div>
+            </div>
+        </form>
+        <button (click)="close(true)" class="close"></button>
+    </div>
+</div>

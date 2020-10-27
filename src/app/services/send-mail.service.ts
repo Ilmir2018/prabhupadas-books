@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 export class SendMailService {
 
   public done: boolean = false;
+  public orderComplect: boolean = false;
+  public moreDetailed: boolean = false;
 
   constructor(private http: HttpClient) { }
 

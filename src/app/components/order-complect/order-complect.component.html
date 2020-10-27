@@ -70,16 +70,15 @@
         </div>
       </form>
     </div>
+    <button (click)="close(true)" class="close"></button>
   </div>
-  <button (click)="close(true)" class="close"></button>
-  <div class="hidden_block"></div>
 </div>
 
 <div *ngIf="visibility && complect == 6" class="complect_2">
   <div class="cont">
     <p class="cont_title">комплект<br>
       все книги ш.прабхупады</p>
-    <img src="../../../assets/complects/vse_3476.png" alt="">
+    <img [src]=slides[complect].image alt="">
     <div class="form">
       <form action="/" method="post" [formGroup]="orderComplect">
         <div class="input_form form_1">
@@ -102,15 +101,16 @@
         </div>
       </form>
       <div class="form_contet">
-        <p class="content">Кол-во томов: <span class="count">97</span></p>
-        <p class="content">Кол-во произведений: <span class="count">36</span></p>
-        <p class="content">Вес: <span class="count">36 000 гр</span></p>
+        <p class="content">Кол-во томов: <span class="count">{{slides[complect].count_books}}</span></p>
+        <p class="content">Кол-во произведений: <span class="count">{{slides[complect].count_songs}}</span></p>
+        <p class="content">Вес: <span class="count">{{slides[complect].weight}}</span></p>
         <br>
         <p class="new_price">новая цена</p>
-        <p class="content">Цена: <span class="count">24 000 р</span><span class="count_2">19 990 р</span></p>
+        <p class="content">Цена: <span class="count">{{slides[complect].price}}</span><span class="count_2">{{slides[complect].new_price}}</span></p>
       </div>
     </div>
+    <button (click)="close(true)" class="close"></button>
   </div>
-  <button (click)="close(true)" class="close"></button>
-  <div class="hidden_block"></div>
 </div>
+
+<app-order-complect-mobile *ngIf="visibility" class="mobile" [complect] = 'complect' [visibility] = 'httpService.orderComplect' (visibleChanged)="dataChangeHandler($event)"></app-order-complect-mobile>

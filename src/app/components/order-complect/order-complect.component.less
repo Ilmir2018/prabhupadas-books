@@ -1,19 +1,24 @@
 .complect {
-    width           : 740px;
-    height          : 592px;
-    background-color: #ffffff;
-    border          : 2px solid #ffd200;
-    box-shadow      : 0px 0px 32px 8px rgba(255, 164, 0, 0.21);
-    margin-left     : 427px;
+    height          : 100%;
     position        : fixed;
-    top             : 30px;
+    width           : 100%;
     z-index         : 10;
+    background-color: #333333;
+    opacity         : 0.95;
+    left            : 0px;
+    top             : 0px;
+    display         : flex;
+    justify-content : center;
 
     .cont {
-        z-index         : 1;
         width           : 740px;
         height          : 592px;
-        background-color: white;
+        background-color: #ffffff;
+        border          : 2px solid #ffd200;
+        box-shadow      : 0px 0px 32px 8px rgba(255, 164, 0, 0.21);
+        position        : fixed;
+        top             : 30px;
+        z-index         : 10;
 
         .top_block {
             display: flex;
@@ -21,7 +26,7 @@
             .top_block__img {
                 width      : 326px;
                 height     : 218px;
-                margin-left: 85px;
+                margin-left: 43px;
                 margin-top : 74px;
             }
 
@@ -296,43 +301,47 @@
                 }
             }
         }
-    }
 
-    .close {
-        content          : "";
-        display          : block;
-        background-image : url(../../../assets/complects/close_2157.png);
-        background-repeat: no-repeat;
-        width            : 27px;
-        height           : 27px;
-        position         : absolute;
-        left             : 740px;
-        top              : -20px;
-        cursor           : pointer;
-        border           : transparent;
-        background-color : transparent;
-        outline          : none;
-        z-index          : 10;
+        .close {
+            content          : "";
+            display          : block;
+            background-image : url(../../../assets/complects/close_2157.png);
+            background-repeat: no-repeat;
+            width            : 27px;
+            height           : 27px;
+            position         : absolute;
+            left             : 740px;
+            top              : -20px;
+            cursor           : pointer;
+            border           : transparent;
+            background-color : transparent;
+            outline          : none;
+            z-index          : 10;
+        }
     }
 }
 
 .complect_2 {
-    width           : 860px;
-    height          : 691px;
-    background-color: #ffffff;
-    border          : 2px solid #ffd200;
-    box-shadow      : 0px 0px 32px 8px rgba(255, 164, 0, 0.21);
-    margin-left     : 370px;
+    height          : 100%;
     position        : fixed;
-    top             : 30px;
+    width           : 100%;
     z-index         : 10;
+    background-color: #333333;
+    opacity         : 0.95;
+    left            : 0px;
+    top             : 0px;
+    display         : flex;
+    justify-content : center;
 
     .cont {
-        z-index         : 1;
         width           : 860px;
         height          : 691px;
-        background-color: white;
+        background-color: #ffffff;
+        border          : 2px solid #ffd200;
+        box-shadow      : 0px 0px 32px 8px rgba(255, 164, 0, 0.21);
         position        : fixed;
+        top             : 30px;
+        z-index         : 10;
 
         .cont_title {
             font-family   : Oranienbaum;
@@ -460,8 +469,8 @@
                         font-weight    : 400;
                         text-transform : uppercase;
                         color          : #000000;
-                        cursor: pointer;
-                        outline: none;
+                        cursor         : pointer;
+                        outline        : none;
                     }
 
                     .order_a_set img {
@@ -537,44 +546,28 @@
                 }
             }
         }
-    }
-
-    .close {
-        content          : "";
-        display          : block;
-        background-image : url(../../../assets/complects/close_2157.png);
-        background-repeat: no-repeat;
-        width            : 27px;
-        height           : 27px;
-        position         : absolute;
-        left             : 860px;
-        top              : -20px;
-        cursor           : pointer;
-        border           : transparent;
-        background-color : transparent;
-        outline          : none;
-        z-index          : 10;
-    }
-
-    .hidden_block {
-        height          : 5500px;
-        position        : absolute;
-        width           : 1520px;
-        z-index         : -1;
-        background-color: #333333;
-        opacity         : 0.4;
-        left            : -373px;
-        top             : -125px;
+        .close {
+            content          : "";
+            display          : block;
+            background-image : url(../../../assets/complects/close_2157.png);
+            background-repeat: no-repeat;
+            width            : 27px;
+            height           : 27px;
+            position         : absolute;
+            left             : 860px;
+            top              : -20px;
+            cursor           : pointer;
+            border           : transparent;
+            background-color : transparent;
+            outline          : none;
+            z-index          : 10;
+        }
     }
 }
 
-.hidden_block {
-    height          : 5500px;
-    position        : absolute;
-    width           : 1520px;
-    z-index         : -1;
-    background-color: #333333;
-    opacity         : 0.4;
-    left            : -431px;
-    top             : -125px;
+
+.mobile {
+    display: none;
 }
+
+@import './adaptive.styles.less';
