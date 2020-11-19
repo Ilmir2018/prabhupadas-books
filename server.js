@@ -23,8 +23,8 @@ app.post("/", (req, res) => {
     host: "smtp.mailtrap.io",
     port: 2525,
     auth: {
-      user: "afffa11a1ae811",
-      pass: "8725bfee51f0d1"
+      user: "db5ec8b0bf7fc1",
+      pass: "1788ef5983e336"
     }
   });
 

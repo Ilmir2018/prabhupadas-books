@@ -10,37 +10,30 @@
       </ul>
       <div class="contacts">
         <div class="phone">
-          <img class="phone_img" src="../assets/images/phone_ringing.png" alt="">
+          <img class="phone_img" src="../assets/images/phone.png" alt="">
           <p class="phone_tel">8-993-024-04-36</p>
         </div>
         <button class="contacts_text" (click)="consult()">Заказать обратный звонок</button>
       </div>
     </div>
     <div class="header_content">
-      <h1 class="header_content_title">Ведическая</h1>
-      <h2 class="header_content_title2">Литература с доставкой по снг</h2>
+      <h1 class="header_content_title">ведическая</h1>
+      <div class="title_2">
+        <h2 class="header_content_bold">литература&nbsp;</h2>
+        <h2 class="header_content_light">с доставкой по снг</h2>
+      </div>
       <p class="header_content_title__p">«Тот, кто сможет читать эти книги с открытым сердцем,
-        не<br> останется равнодушным,независимо от конфессиональной<br>
+        не останется равнодушным,независимо от<br> конфессиональной
         прнадлежности, веры или философских убеждений».</p>
         <img class="small_books" src="../assets/mobile/small_books.png" alt="">
       <button class="order_a_set" (click)="scroll(2)">ВЫБРАТЬ КОМПЛЕКТ КНИГ
         <img src="../assets/images/books.png" alt=""></button>
     </div>
     <div class="header_content_icons">
-      <div class="icons">
-        <img class="icon_images" src="../assets/images/study_49.png" alt="">
-        <p class="icon_text">Перевод на русский язык<br>
-          с санскрита с транслитерацией</p>
-      </div>
-      <div class="icons">
-        <img class="icon_images" src="../assets/images/letter_51.png" alt="">
-        <p class="icon_text">Приемственность учителей<br>
-          и учеников которой более 5000 лет</p>
-      </div>
-      <div class="icons">
-        <img class="icon_images" src="../assets/images/mentor_50.png" alt="">
-        <p class="icon_text">С отзывами и рекомендациями<br>
-          мировых учёных и политиков</p>
+      <div class="icons" *ngFor="let icon of icons">
+        <img class="icon_images" [src]=icon.icon alt="">
+        <p class="icon_text">{{ icon.title_1 }}<br>
+          {{ icon.title_2 }}</p>
       </div>
     </div>
     <div class="header_content_small">
@@ -61,7 +54,7 @@
     <div class="second_block__title">
       <h1 class="choose_complect">выбери свой комплект</h1>
     </div>
-    <app-slider  id="2" (dataChanged)="dataChangeHandler($event)"></app-slider>
+    <app-slider id="2" (dataChanged)="dataChangeHandler($event)"></app-slider>
     <div class="slider_2">
       <div class="slide active" (onclick)="currentSlide(1)"></div>
       <div class="slide" (onclick)="currentSlide(2)"></div>
@@ -82,7 +75,6 @@
             на русский язык,<br> для чтения санскрита.</p>
           <img class="first_book_img" src="../assets/images/1 табличка.png" alt="">
         </div>
-
       </div>
     </article>
     <div class="two_books">

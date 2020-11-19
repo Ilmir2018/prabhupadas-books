@@ -20,7 +20,6 @@ export class MoreDetailedComponent implements OnInit {
   constructor(private fb: FormBuilder, private httpService: SendMailService) { }
 
   ngOnInit() {
-    console.log(this.complect)
     this.initForm();
   }
 

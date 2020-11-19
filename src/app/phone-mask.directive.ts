@@ -23,7 +23,6 @@ export class PhoneMaskDirective {
     let newVal = event.replace(/\D/g, '');
     if (backspace && newVal.length <= 10) {
       newVal = newVal.substring(0, newVal.length - 1);
-      console.log(newVal)
     }
     if (newVal.length === 0) {
       newVal = '';

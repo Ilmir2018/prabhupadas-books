@@ -264,6 +264,7 @@ export const Complects = [
     {
         image: '../../../assets/complects/vse_3476.png',
         mob_image: '../../../assets/mobile/все.png',
+        title_2: 'все книги прабхупады',
         count_books: '97',
         count_songs: '36',
         weight: '36 000 гр',
@@ -275,15 +276,18 @@ export const Complects = [
 export const iconsContent = [
     {
         icon: "../assets/images/study_49.png",
-        title: "Перевод на русский язык с санскрита с транслитерацией"
-    },
-    {
-        icon: "../assets/images/letter_51.png",
-        title: "Приемственность учителей и учеников которой более 5000 лет"
+        title_1: "Перевод на русский язык",
+        title_2: " с санскрита с транслитерацией",
     },
     {
         icon: "../assets/images/mentor_50.png",
-        title: "С отзывами и рекомендациями мировых учёных и политиков"
+        title_1: "Приемственность учителей ",
+        title_2: "и учеников которой более 5000 лет",
+    },
+    {
+        icon: "../assets/images/letter_51.png",
+        title_1: "С отзывами и рекомендациями ",
+        title_2: "мировых учёных и политиков",
     }
 ];
 

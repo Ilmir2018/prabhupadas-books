@@ -23,7 +23,6 @@ export class NameMaskDirective {
     let newVal = event.replace(/^([a-z0-9_-]+\.)/g, '');
     if (backspace && newVal.length <= 10) {
       newVal = newVal.substring(0, newVal.length - 1);
-      console.log(newVal)
     }
     if (newVal.length === 0) {
       newVal = '';

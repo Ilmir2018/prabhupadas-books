@@ -35,7 +35,6 @@ export class AppComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.viewChild)
   }
 
   get _phones() {
@@ -160,14 +159,6 @@ export class AppComponent implements OnInit {
           Validators.required,
         ]]
     });
-  }
-
-  getSelectedText(): string {
-    return window.getSelection().toString();
-  }
-
-  visibility() {
-    this.visible = true;
   }
 
   submit() {
